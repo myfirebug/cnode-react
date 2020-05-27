@@ -14,34 +14,39 @@ import {
     Switch,
     Redirect
 } from 'react-router-dom'
+import useHash from '../hook/useHash'
 
 import ErrorBoundary from '../components/errorBoundary'
 
 const routerList = [
     {
         component: lazy(() => import(/*webpackChunkName:"home"*/'../page/home')),
-        pathname: '/'
+        pathname: '/home'
+    },
+    {
+        component: lazy(() => import(/*webpackChunkName:"details"*/'../page/details')),
+        pathname: '/details'
     }
 ]
-
 const Routers = () => {
     return (
         <HashRouter>
             <ErrorBoundary>
-                <Suspense fallback={<div>loading</div>}>
-                <Switch>
-                    {
-                        routerList.map((router, index) => (
-                            <Route
-                                key={index}
-                                path={ router.pathname }
-                                component={ router.component }>
-                            </Route>
-                        ))
-                    }
-                    <Redirect to='/' />
-                </Switch>
-            </Suspense>
+                <Suspense fallback={<div>{ useHash() }</div>}>
+                    <Switch>
+                        {
+                            routerList.map((router, index) => {
+                                console.log(router.component)
+                                return <Route
+                                    key={index}
+                                    path={ router.pathname }
+                                    component={ router.component }>
+                                </Route>
+                            })
+                        }
+                        <Redirect to='/home' />
+                    </Switch>
+                </Suspense>
             </ErrorBoundary>
         </HashRouter>
     )

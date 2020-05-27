@@ -35,10 +35,17 @@
   },
   "homepage": ".",
   "devDependencies": {
+    "axios": "^0.19.2",
     "customize-cra": "^0.9.1",
     "node-sass": "^4.14.1",
+    "prop-types": "^15.7.2",
     "react-app-rewired": "^2.1.6",
+    "react-redux": "^7.2.0",
     "react-router-dom": "^5.2.0",
+    "redux": "^4.0.5",
+    "redux-logger": "^3.0.6",
+    "redux-persist": "^6.0.0",
+    "redux-thunk": "^2.3.0",
     "sass-resources-loader": "^2.0.3"
   }
 }

@@ -1,0 +1,29 @@
+@include b(header){
+  position: fixed;
+  left:0;
+  top:0;
+  right: 0;
+  height: .9rem;
+  line-height: .9rem;
+  text-align: center;
+  font-size: $f30;
+  background: $bg01;
+  transition: all .25s ease 0s;
+  overflow: hidden;
+}
+
+@include b(tabs){
+  @include e(list){
+    display: flex;
+  }
+  @include e(item){
+    flex:1;
+    cursor: pointer;
+    color:rgba(255,225,255,.95);
+    &:hover,
+    &.is-active{
+      font-weight: bold;
+      color:#fff;
+    }
+  }
+}

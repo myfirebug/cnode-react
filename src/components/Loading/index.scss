@@ -1,0 +1,78 @@
+@include b(loading) {
+  position: fixed;
+  left:0;
+  top:0;
+  bottom:0;
+  right:0;
+  z-index: 10000;
+  display: none;
+  @include e(content){
+    position: absolute;
+    left:50%;
+    top:50%;
+    margin: -.7rem 0 0 -.7rem;
+    padding-top: .2rem;
+    width: 1.4rem;
+    height: 1.4rem;
+    text-align: center;
+    color:#fff;
+    font-size:$f24;
+    background:rgba(0,0,0,.6);
+    border-radius: .1rem;
+    box-sizing: border-box;
+    .icon{
+      position: relative;
+      width: .6rem;
+      height: .6rem;
+      margin:0 auto;
+      animation:ui-loading-rotate 1s infinite linear;
+      .circle1,
+      .circle2,
+      .circle3,
+      .circle4,
+      .circle5,
+      .circle6,
+      .circle7,
+      .circle8,
+      .circle9,
+      .circle10,
+      .circle11,
+      .circle12{
+        position: absolute;
+        left:0;
+        top:0;
+        display: inline-block;
+        width: .6rem;
+        height: .6rem;
+
+        &:after{
+          content: '';
+          position: absolute;
+          left:.28rem;
+          top:0;
+          width: .04rem;
+          height: .1rem;
+          background:#fff;
+          border-radius:.04rem;
+        }
+      }
+      @for $i from 1 through 12 {
+        .circle#{$i} {
+          transform:rotate(30 * $i + deg);
+          opacity:0.083 * $i;
+        }
+      }
+    }
+    .text{
+      padding-top:.1rem;
+    }
+    @keyframes ui-loading-rotate{
+      0% {
+        transform:rotate(0deg)
+      }
+      100% {
+        transform:rotate(360deg)
+      }
+    }
+  }
+}
