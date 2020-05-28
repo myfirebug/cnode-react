@@ -12,5 +12,11 @@ import {
 export default {
     getTopics(params) {
         return get('/topics', params, 'api')
+    },
+    getDetails(id) {
+        return get(`/topic/${id}`, {},'api')
+    },
+    login(params) {
+        return post('/accesstoken', params,'api')
     }
 }

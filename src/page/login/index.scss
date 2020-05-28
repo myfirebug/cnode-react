@@ -1,0 +1,38 @@
+@include b(login){
+  position: fixed;
+  left:0;
+  bottom:0;
+  right: 0;
+  top:0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding:0 .3rem;
+  text-align: center;
+  @include e(wrapper){
+    width: 100%
+  }
+  @include e(item){
+    margin-bottom:.3rem;
+    height: .9rem;
+  }
+  .title{
+    font-size:$f46;
+    padding-bottom:.4rem;
+  }
+  input{
+    width: 100%;
+    height: 100%;
+    border:1px solid #ddd;
+    border-radius: .05rem;
+    padding:0 .1rem;
+  }
+  button{
+    width: 100%;
+    height: 100%;
+    border-radius: .05rem;
+    background: $bg01;
+    color:#fff;
+    font-size: $f36;
+  }
+}

@@ -8,7 +8,15 @@ import { combineReducers } from 'redux'
 import {
     topics
 } from './topics'
+import {
+    details
+} from './details';
+import {
+    userInfo
+} from './userInfo';
 
 export default combineReducers({
-    topics
+    topics,
+    details,
+    userInfo
 })

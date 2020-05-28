@@ -20,8 +20,7 @@ import useScollLoad from '../../hook/useScollLoad'
 import PropTypes from 'prop-types'
 import './index.scss'
 
-const Home = ({ topics, getAllTopics, flag, ...rest }) => {
-    console.log(rest, 'restrestrestrest')
+const Home = ({ topics, getAllTopics, flag }) => {
     const [params, setParams] = useState({
         page: 1,
         tab: '',

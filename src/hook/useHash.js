@@ -20,7 +20,7 @@ const useHash = () => {
         return () => {
             window.removeEventListener('hashchange', hashChangeHandler)
         }
-    }, [])
+    })
 
     return hash
 }

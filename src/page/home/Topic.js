@@ -60,7 +60,10 @@ const Topic = memo((props) => {
 
     return (
         <li className="cn-topics-item">
-            <Link to="/details">
+            <Link to={{
+                pathname: '/details',
+                search: `id=${id}`
+            }}>
                 <div className="cn-topics-item__hd">
                     <div className="user-avatar">
                         <LazyLoad key={id}>

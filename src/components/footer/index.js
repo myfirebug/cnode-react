@@ -5,15 +5,16 @@
  * @Last Modified time: 14:10
  */
 import React, {
-    useState
+    useState,
+    memo
 } from 'react'
 import {
     Link
 } from 'react-router-dom'
-import useHash from '../../hook/useHash'
+import PropTypes from 'prop-types'
 import './index.scss'
 
-const Footer = () => {
+const Footer = memo(({ hash }) => {
     const [navList] = useState([
         {
             icon: '&#xe729;',
@@ -36,13 +37,12 @@ const Footer = () => {
             path: '/my'
         }
     ])
-    const hash = useHash()
     return (
         <div className="cn-footer">
             <ul className="cn-nav">
                 {
                     navList.map((item, index) => (
-                        <li className={['cn-nav__item', hash === item.path ? 'is-active' : ''].join(' ')}
+                        <li className={['cn-nav__item', hash.indexOf(item.path) !== -1 ? 'is-active' : ''].join(' ')}
                             key={index}>
                             <Link
                                 to={{
@@ -52,7 +52,7 @@ const Footer = () => {
                                     <span
                                         dangerouslySetInnerHTML={{__html: `${item.icon}`}}
                                         className="ued-mobile"></span>
-                                    <span className="text">{item.name}</span>
+                                <span className="text">{item.name}</span>
                             </Link>
                         </li>
                     ))
@@ -60,6 +60,10 @@ const Footer = () => {
             </ul>
         </div>
     )
+})
+
+Footer.propTypes = {
+    hash: PropTypes.string.isRequired
 }
 
 export default Footer
