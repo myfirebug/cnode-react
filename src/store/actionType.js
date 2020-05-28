@@ -6,3 +6,4 @@
  */
 // 主题列表
 export const TOPICS = 'TOPICS'
+export const IS_SCROLL = 'IS_SCROLL'

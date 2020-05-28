@@ -10,7 +10,7 @@ module.exports = override(
             rule.use.push({
                 loader: require.resolve("sass-resources-loader"),
                 options: {
-                    resources: "./src/assets/scss/index.scss" //这⾥是你⾃⼰放公共scss变量的路径
+                    resources: "./src/assets/scss/index.scss"
                 }
             });
         }

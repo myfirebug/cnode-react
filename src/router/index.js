@@ -17,6 +17,7 @@ import {
 import useHash from '../hook/useHash'
 
 import ErrorBoundary from '../components/errorBoundary'
+import Footer from '../components/footer'
 
 const routerList = [
     {
@@ -36,7 +37,6 @@ const Routers = () => {
                     <Switch>
                         {
                             routerList.map((router, index) => {
-                                console.log(router.component)
                                 return <Route
                                     key={index}
                                     path={ router.pathname }
@@ -46,6 +46,7 @@ const Routers = () => {
                         }
                         <Redirect to='/home' />
                     </Switch>
+                    <Footer />
                 </Suspense>
             </ErrorBoundary>
         </HashRouter>

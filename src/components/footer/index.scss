@@ -1,0 +1,61 @@
+@include b(footer){
+  position: fixed;
+  left:0;
+  bottom:0;
+  z-index:1000;
+  width:100%;
+  height:.96rem;
+  border-top:1px solid $bor05;
+  background:$bg04;
+}
+@include b(nav){
+  display: flex;
+  @include e(item){
+    flex:1;
+    a{
+      position:relative;
+      display:block;
+      font-size:0;
+      text-align:center;
+      color:$fc08;
+      height:100%;
+      text-decoration: none;
+      transtion:all .25s ease 0s;
+    }
+    .text{
+      display:block;
+      font-size:$f22;
+    }
+    .ued-mobile{
+      position:relative;
+      padding-top:.1rem;
+      display:inline-block;
+      width:.46rem;
+      height: .56rem;
+      font-size: $f40;
+    }
+    @include when(active){
+      a{
+        color:$fc01;
+      }
+      .ued-mobile{
+        animation-name: scale;
+        animation-duration: .5s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count:1;
+      }
+    }
+  }
+  @keyframes scale
+  {
+    0% {
+      font-size:$f40;
+    }
+    50% {
+      font-size:$f46;
+    }
+    100% {
+      font-size:$f40;
+    }
+  }
+}

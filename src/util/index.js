@@ -41,3 +41,7 @@ export function fmtDate (date, fmt) {
     }
     return fmt
 }
+
+export default {
+    fmtDate: fmtDate
+}

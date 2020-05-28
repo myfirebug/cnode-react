@@ -30,7 +30,7 @@ const persistConfig = {
     // 某个reducer,不持久化
     // blacklist: ['counter'],
     // 需要持久化的模块
-    whitelist: ['topics']
+    whitelist: []
 }
 
 const persistedReducer = persistReducer(persistConfig, reducers);

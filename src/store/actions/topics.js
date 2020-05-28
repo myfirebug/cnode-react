@@ -12,12 +12,22 @@ const topics = payload => ({
     payload
 })
 
-export const  getAllTopics = (params) => dispatch => {
-    Ajax.getTopics(params)
-        .then(res => {
-            dispatch(topics({
-                topics: res.datas,
-                flag: params.page === 1 ? true : false
-            }))
-        })
+const isScroll = flag => ({
+    type: types.IS_SCROLL,
+    flag: flag
+})
+
+export const  getAllTopics = (params) => (dispatch, getState) => {
+    const flag = getState().topics.flag
+    if (flag) {
+        dispatch(isScroll(false))
+        Ajax.getTopics(params)
+            .then(res => {
+                dispatch(isScroll(true))
+                dispatch(topics({
+                    topics: res.data,
+                    flag: params.page === 1 ? true : false
+                }))
+            })
+    }
 }
