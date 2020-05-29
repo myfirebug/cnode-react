@@ -14,6 +14,9 @@ import {connect} from 'react-redux';
 import { getUserInfo } from '../../store/actions/userInfo'
 import {createHashHistory} from 'history';
 import PropTypes from 'prop-types'
+import {
+    Toast
+} from 'antd-mobile'
 import './index.scss'
 
 const Login = memo(({ accessToken, getUserInfo, location }) => {
@@ -34,6 +37,8 @@ const Login = memo(({ accessToken, getUserInfo, location }) => {
     const submitHanlder = useCallback(() => {
         if (token) {
             getUserInfo(token, (location.state && location.state.from) ? location.state.from : '/home')
+        } else {
+            Toast.info('请输入token', 100)
         }
     }, [token])
 
@@ -42,8 +47,11 @@ const Login = memo(({ accessToken, getUserInfo, location }) => {
             <div className="cn-login__wrapper">
                 <h1 className="title">欢迎来到CNODE社区</h1>
                 <div className="cn-login__form">
-                    <div className="cn-login__item">
+                    <div className="cn-login__item ui-border-radius" style={{
+                        background: '#fff'
+                    }}>
                         <input
+                            autoFocus
                             type="text"
                             onChange={getToken}
                             placeholder="请输入accessToken"
@@ -61,7 +69,7 @@ const Login = memo(({ accessToken, getUserInfo, location }) => {
 })
 
 Login.propTypes = {
-    accessToken: PropTypes.string.isRequired,
+    accessToken: PropTypes.string,
     getUserInfo: PropTypes.func.isRequired
 }
 

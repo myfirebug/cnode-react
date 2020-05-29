@@ -14,7 +14,7 @@ import ReplayList from './ReplayList'
 export const ReplayWrapper = memo(({ list, userInfo }) => {
     return (
         <div className="cn-replay">
-            <div className="cn-replay__hd">
+            <div className="cn-replay__hd ui-border-tb">
                 共{ list.length }条回复
             </div>
             <div className="cn-replay__bd">

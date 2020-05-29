@@ -3,8 +3,9 @@
   left:0;
   top:0;
   right: 0;
-  height: .9rem;
-  line-height: .9rem;
+  z-index: 100;
+  height: 45px;
+  line-height: 45px;
   text-align: center;
   font-size: $f30;
   background: $bg01;

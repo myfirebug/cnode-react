@@ -18,7 +18,6 @@ import useHash from '../hook/useHash'
 import ErrorBoundary from '../components/errorBoundary'
 import Footer from '../components/footer'
 import PrivateRoute from '../components/PrivateRoute'
-import Loading from '../components/loading'
 
 const routerList = [
     {
@@ -47,7 +46,7 @@ const Routers = () => {
     return (
         <HashRouter>
             <ErrorBoundary>
-                <Suspense fallback={<Loading style={{ display: 'block' }} />}>
+                <Suspense fallback={<div>loading</div>}>
                     <Switch>
                         {
                             routerList.map((router, index) => {

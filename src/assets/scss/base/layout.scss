@@ -15,7 +15,7 @@ html {
 body {
   padding: 0;
   margin: 0;
-  font-size: .32rem;
+  font-size: 16px;
   overflow:hidden;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
@@ -213,3 +213,5 @@ ul, li, ol{
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+@import "border";

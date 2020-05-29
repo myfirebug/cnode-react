@@ -60,7 +60,7 @@ const Topic = memo((props) => {
 
     return (
         <li className="cn-topics-item">
-            <Link to={{
+            <Link className="ui-border-b" to={{
                 pathname: '/details',
                 search: `id=${id}`
             }}>

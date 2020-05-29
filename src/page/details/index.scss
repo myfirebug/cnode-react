@@ -1,26 +1,25 @@
 @include b(details){
-  padding-bottom: .96rem;
+  padding-bottom: 48px;
   background: $bg04;
   @include e(hd){
-    padding: .5rem .3rem;
-    border-bottom: 1px solid $bor05;
+    padding: 25px 15px;
     .title {
-      font-size: .4rem;
+      font-size: $f40;
       font-weight: bold;
     }
     .info{
-      padding-top: .2rem;
+      padding-top: 10px;
       font-size: 0;
       .ued-mobile {
-        padding-right: .1rem;
+        padding-right: 5px;
         font-size: $f20;
       }
       span {
-        padding-right: .2rem;
+        padding-right: 10px;
         line-height: 1;
-        font-size: .24rem;
+        font-size: $f24;
         color: $fc09;
-        margin-right: .2rem;
+        margin-right: 10px;
         border-right: 1px solid $bor06;
         &:last-child {
           border: none;
@@ -29,25 +28,25 @@
     }
   }
   @include e(bd){
-    padding: 0 .3rem;
-    font-size: .3rem;
+    padding: 0 15px;
+    font-size: $f30;
     overflow: hidden;
     img{
       max-width: 100%;
     }
     h2 {
-      padding: .3rem 0;
+      padding: 15px 0;
     }
     h3,
     h4 {
-      padding: .3rem 0;
+      padding: 15px 0;
     }
     h1 {
       display: none;
     }
     p,
     li {
-      margin: .3rem 0;
+      margin: 15px 0;
       color: $fc07;
     }
     a {

@@ -24,7 +24,7 @@ export const Replay = memo((props) => {
         userInfo
     } = props
     return (
-        <li className="cn-replay__item">
+        <li className="cn-replay__item ui-border-b">
             <div className="author_content">
                 <div className="user-avatar">
                     <LazyLoad>
@@ -42,7 +42,7 @@ export const Replay = memo((props) => {
                     userInfo.loginname !== loginname
                     && userInfo.token ?
                         <>
-                            <span>
+                            <span className="ui-border-r">
                                 <i className="ued-mobile">&#xe643;</i>点赞
                             </span>
                             <span>
@@ -54,7 +54,7 @@ export const Replay = memo((props) => {
                     userInfo.loginname === loginname
                     && userInfo.token ?
                         <>
-                            <span>
+                            <span className="ui-border-r">
                                 <i className="ued-mobile">&#xe78c;</i>删除
                             </span>
                             <span>

@@ -7,6 +7,7 @@
 import axios from 'axios'
 import config from './config'
 import Qs from 'qs'
+import { Toast } from 'antd-mobile'
 const ENV = process.env.NODE_ENV;
 
 const getService = (serviceUrl) => {
@@ -27,7 +28,8 @@ axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded
 // 请求拦截器
 axios.interceptors.request.use(
     config => {
-        document.getElementById('js_loading').style.display = 'block';
+        Toast.loading('loading...', 0)
+        // document.getElementById('js_loading').style.display = 'block';
         return config
     },
     error => {
@@ -38,7 +40,8 @@ axios.interceptors.request.use(
 // 响应拦截器
 axios.interceptors.response.use(
     response => {
-        document.getElementById('js_loading').style.display = 'none'
+        // document.getElementById('js_loading').style.display = 'none'
+        Toast.hide()
         if (response.status === 200) {
             return Promise.resolve(response.data)
         } else {
@@ -46,7 +49,8 @@ axios.interceptors.response.use(
         }
     },
     error => {
-        document.getElementById('js_loading').style.display = 'none'
+        // document.getElementById('js_loading').style.display = 'none'
+        Toast.hide()
         let response = error.response
         if (!response) {
             return Promise.reject(error)

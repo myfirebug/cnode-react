@@ -30,7 +30,7 @@ const Details = memo(({ details, getDetails, userInfo }) => {
             {
                JSON.stringify(details) !== '{}' ?
                    <div className="cn-details">
-                       <div className="cn-details__hd">
+                       <div className="cn-details__hd ui-border-b">
                            <h1 className="title">{ details.title }</h1>
                            <div className="info">
                         <span>

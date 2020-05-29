@@ -3,7 +3,6 @@ const {
     adjustStyleLoaders,
     fixBabelImports
 } = require("customize-cra");
-console.log(require("customize-cra"))
 
 
 module.exports = override(

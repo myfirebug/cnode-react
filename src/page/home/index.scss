@@ -1,12 +1,12 @@
 @include b(topics-list){
-  padding:.9rem 0 .96rem 0;
+  padding:45px 0 48px 0;
   background:$bg04;
 }
 @include b(topics-item){
-  padding:.2rem .3rem;
-  border-bottom:1px solid $bor06;
   transition: all .25s ease 0s;
   a{
+    display: block;
+    padding:10px 15px;
     color:#333;
     text-decoration: none;
   }
@@ -21,34 +21,34 @@
       height: 100%;
     }
     .user-avatar{
-      width: .6rem;
-      height: .6rem;
-      margin-right: .1rem;
+      width: 30px;
+      height: 30px;
+      margin-right: 5px;
       border-radius: 50%;
       overflow: hidden;
       background:#ccc;
     }
     .user-name{
-      font-size: .34rem;
+      font-size: $f34;
       line-height: 1;
     }
     .create-at{
-      padding-top: .15rem;
-      font-size: .24rem;
+      padding-top: 8px;
+      font-size: $f24;
       color: $fc08;
       line-height: 1;
     }
   }
   @include e(bd){
-    padding: .2rem 0;
-    font-size: .36rem;
+    padding: 10px 0;
+    font-size: $f36;
     .put-top{
-      padding: 0 .1rem;
+      padding: 0 5px;
       vertical-align: middle;
       display: inline-block;
-      margin-right: .1rem;
-      line-height: .36rem;
-      font-size: .22rem;
+      margin-right: 5px;
+      line-height: 18px;
+      font-size: $f22;
       border:1px solid $bor01;
       color:$bor01;
     }
@@ -56,15 +56,15 @@
   @include e(ft){
     font-size: 0;
     .ued-mobile{
-      padding-right: .1rem;
+      padding-right: 5px;
       font-size: $f20;
     }
     span{
-      padding-right: .2rem;
+      padding-right: 10px;
       line-height: 1;
-      font-size: .24rem;
+      font-size: $f24;
       color: $fc09;
-      margin-right: .2rem;
+      margin-right: 10px;
       border-right: 1px solid $bor06;
       &:last-child{
         border: none;

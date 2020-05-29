@@ -7,30 +7,30 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding:0 .3rem;
+  padding:0 15px;
   text-align: center;
   @include e(wrapper){
     width: 100%
   }
   @include e(item){
-    margin-bottom:.3rem;
-    height: .9rem;
+    margin-bottom:15px;
+    height: 45px;
   }
   .title{
     font-size:$f46;
-    padding-bottom:.4rem;
+    padding-bottom:20px;
   }
   input{
     width: 100%;
     height: 100%;
-    border:1px solid #ddd;
-    border-radius: .05rem;
-    padding:0 .1rem;
+    border-radius: 3px;
+    padding:0 4px;
+    background: none;
   }
   button{
     width: 100%;
     height: 100%;
-    border-radius: .05rem;
+    border-radius: 3px;
     background: $bg01;
     color:#fff;
     font-size: $f36;

@@ -6,14 +6,16 @@
  */
 import {
     TOPICS,
-    IS_SCROLL
+    IS_SCROLL,
+    TAB_ACTIVE
 } from '../actionType'
 
 const initialState = {
     // 列表数据
     datas: [],
     // 是否请求接口
-    flag: true
+    flag: true,
+    tab: ''
 }
 
 export const topics = (state = initialState, action) => {
@@ -37,6 +39,11 @@ export const topics = (state = initialState, action) => {
             return {
                 ...state,
                 flag: action.flag
+            }
+        case TAB_ACTIVE:
+            return {
+                ...state,
+                tab: action.tab
             }
         default:
             return state

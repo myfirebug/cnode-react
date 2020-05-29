@@ -8,6 +8,8 @@
 export const TOPICS = 'TOPICS'
 // 是否请求接口
 export const IS_SCROLL = 'IS_SCROLL'
+// 选中的tab
+export const TAB_ACTIVE = 'TAB_ACTIVE'
 
 // 主题详情
 export const DETAILS = 'DETAILS'

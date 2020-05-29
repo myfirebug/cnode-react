@@ -1,19 +1,15 @@
 @include b(replay){
   @include e(hd){
-    padding: .2rem .3rem;
+    padding: 10px 15px;
     background: $bg02;
-    border-bottom: 1px solid $bor03;
-    border-top: 1px solid $bor05;
   }
   @include e(list){
-    padding: 0 .3rem;
     background: $bg04;
   }
   @include e(item){
-    padding: .3rem 0;
-    border-bottom: 1px solid $bor05;
+    padding: 15px 15px;
     .content{
-      padding:.2rem 0 .3rem .7rem;
+      padding:10px 0 .3rem 35px;
       color:#666;
       font-size: $f28;
     }
@@ -22,9 +18,9 @@
       align-items: center;
       font-size: $f28;
       .user-avatar {
-        width: .6rem;
-        height: .6rem;
-        margin-right: .1rem;
+        width: 30px;
+        height: 30px;
+        margin-right: 5px;
         border-radius: 50%;
         overflow: hidden;
         background: #ccc;
@@ -33,24 +29,20 @@
         flex: 1;
       }
       .user-name{
-        padding-right: .1rem;
+        padding-right: 5px;
       }
     }
     .operation{
       font-size: $f26;
       line-height: 1;
       span {
-        padding-right: .2rem;
-        margin-right: .2rem;
-        border-right: 1px solid $bor05;
+        padding-right: 10px;
+        margin-right: 10px;
         color: $fc07;
-        &:last-child {
-          border: none;
-        }
       }
       i {
         display: inline-block;
-        padding-right: .1rem;
+        padding-right: 5px;
         text-align: center;
         color: $fc08;
         font-size: $f26;

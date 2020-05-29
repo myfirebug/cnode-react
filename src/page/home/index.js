@@ -10,7 +10,10 @@ import React, {
     useCallback
 } from 'react'
 import {connect} from 'react-redux';
-import { getAllTopics } from '../../store/actions/topics'
+import {
+    getAllTopics,
+    getTabActive
+} from '../../store/actions/topics'
 // 头部
 import Header from '../../components/header'
 // 列表
@@ -22,10 +25,10 @@ import PropTypes from 'prop-types'
 import SkeletonList from '../../skeleton/List'
 import './index.scss'
 
-const Home = ({ topics, getAllTopics, flag }) => {
+const Home = ({ topics, getAllTopics, flag, getTabActive, tab }) => {
     const [params, setParams] = useState({
         page: 1,
-        tab: '',
+        tab: tab,
         limit: 10
     })
     const isScrollLoad = useScollLoad();
@@ -40,10 +43,14 @@ const Home = ({ topics, getAllTopics, flag }) => {
     }, [isScrollLoad])
 
     useEffect(() => {
+        if (params.page === 1) {
+            window.scrollTo(0, 0)
+        }
         getAllTopics(params)
     }, [params, getAllTopics])
 
     const tabChangeHandler = useCallback((value) => {
+        getTabActive(value)
         setParams({
             ...params,
             page: 1,
@@ -53,12 +60,12 @@ const Home = ({ topics, getAllTopics, flag }) => {
 
     return (
         <>
-            <Header tabChangeHandler={tabChangeHandler} tab={params.tab}></Header>
+            <Header tabChangeHandler={tabChangeHandler} tab={tab}></Header>
             {
                 topics.length ?
                     <TopicsList topics={topics}></TopicsList> :
                     <SkeletonList style={{
-                        padding: '1.1rem .3rem 0 .3rem'
+                        padding: '55px 15px 0 15px'
                     }} />
             }
         </>
@@ -68,17 +75,21 @@ const Home = ({ topics, getAllTopics, flag }) => {
 Home.propTypes = {
     topics: PropTypes.array.isRequired,
     getAllTopics: PropTypes.func.isRequired,
-    flag: PropTypes.bool.isRequired
+    flag: PropTypes.bool.isRequired,
+    getTabActive: PropTypes.func.isRequired,
+    tab: PropTypes.string.isRequired
 }
 
 const topics = state => ({
     topics: state.topics.datas,
-    flag: state.topics.flag
+    flag: state.topics.flag,
+    tab: state.topics.tab
 })
 
 export default connect(
     topics,
     {
-        getAllTopics
+        getAllTopics,
+        getTabActive
     }
 )(Home)

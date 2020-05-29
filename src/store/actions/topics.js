@@ -17,6 +17,11 @@ const isScroll = flag => ({
     flag: flag
 })
 
+const tabActive = tab => ({
+    type: types.TAB_ACTIVE,
+    tab: tab
+})
+
 export const  getAllTopics = (params) => (dispatch, getState) => {
     const length = getState().topics.datas.length
     const flag = getState().topics.flag
@@ -37,4 +42,8 @@ export const  getAllTopics = (params) => (dispatch, getState) => {
                 }))
             })
     }
+}
+
+export const getTabActive = tab => dispatch => {
+    dispatch(tabActive(tab))
 }
