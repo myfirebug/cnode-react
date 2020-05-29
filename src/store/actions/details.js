@@ -12,7 +12,10 @@ const details = data => ({
     data
 })
 
-export const  getDetails = id => dispatch => {
+export const  getDetails = id => (dispatch, getState) => {
+    if (JSON.stringify(getState().details) !== '{}') {
+        dispatch(details({}))
+    }
     Ajax.getDetails(id)
         .then(res => {
             dispatch(details(res.data))

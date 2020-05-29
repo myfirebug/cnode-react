@@ -18,6 +18,8 @@ import TopicsList from './TopicsList'
 // 是否可滚动加载
 import useScollLoad from '../../hook/useScollLoad'
 import PropTypes from 'prop-types'
+// 列表骨架屏
+import SkeletonList from '../../skeleton/List'
 import './index.scss'
 
 const Home = ({ topics, getAllTopics, flag }) => {
@@ -38,10 +40,6 @@ const Home = ({ topics, getAllTopics, flag }) => {
     }, [isScrollLoad])
 
     useEffect(() => {
-        // 让滚动条滚动到顶部
-        if (params.page === 1) {
-            window.scrollTo(0, 0)
-        }
         getAllTopics(params)
     }, [params, getAllTopics])
 
@@ -56,7 +54,13 @@ const Home = ({ topics, getAllTopics, flag }) => {
     return (
         <>
             <Header tabChangeHandler={tabChangeHandler} tab={params.tab}></Header>
-            <TopicsList topics={topics}></TopicsList>
+            {
+                topics.length ?
+                    <TopicsList topics={topics}></TopicsList> :
+                    <SkeletonList style={{
+                        padding: '1.1rem .3rem 0 .3rem'
+                    }} />
+            }
         </>
     )
 }

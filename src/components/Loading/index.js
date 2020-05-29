@@ -4,12 +4,15 @@
  * @Last Modified by:   hejp
  * @Last Modified time: 17:03
  */
-import React from 'react'
+import React, {
+    memo
+} from 'react'
+import PropTypes from 'prop-types'
 import './index.scss'
 
-const Loading = () => {
+const Loading = memo(( { style } ) => {
     return (
-        <div id="js_loading" className="cn-loading">
+        <div id="js_loading" className="cn-loading" style={style}>
             <div className="cn-loading__content">
                 <div className="icon">
                     <span className="circle1"></span>
@@ -29,6 +32,10 @@ const Loading = () => {
             </div>
         </div>
     )
+})
+
+Loading.propTypes = {
+    style: PropTypes.object
 }
 
 export default Loading

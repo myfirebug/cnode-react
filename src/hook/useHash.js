@@ -16,6 +16,10 @@ const useHash = () => {
         setHash(window.location.hash)
     }
     useEffect(() => {
+        setHash(window.location.hash)
+    }, [])
+
+    useEffect(() => {
         window.addEventListener('hashchange', hashChangeHandler)
         return () => {
             window.removeEventListener('hashchange', hashChangeHandler)

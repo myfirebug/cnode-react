@@ -18,7 +18,14 @@ const isScroll = flag => ({
 })
 
 export const  getAllTopics = (params) => (dispatch, getState) => {
+    const length = getState().topics.datas.length
     const flag = getState().topics.flag
+    if (length && params.page === 1) {
+        dispatch(topics({
+            topics: [],
+            flag: true
+        }))
+    }
     if (flag) {
         dispatch(isScroll(false))
         Ajax.getTopics(params)
