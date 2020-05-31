@@ -38,7 +38,7 @@ const Footer = memo(({ hash }) => {
         }
     ])
     return (
-        <div className="cn-footer ui-border-t">
+        <div className="cn-footer">
             <ul className="cn-nav">
                 {
                     navList.map((item, index) => (

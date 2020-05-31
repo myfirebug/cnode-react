@@ -6,7 +6,7 @@
   width:100%;
   height:48px;
   background:$bg04;
-  box-shadow: 0 0 10px rgba(0,0,0,.2);
+  box-shadow: 0 0 5px rgba(0,0,0,.1);
 }
 @include b(nav){
   display: flex;

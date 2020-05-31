@@ -10,7 +10,7 @@ import {
 } from 'redux'
 // 数据持久化工具
 import {persistReducer} from 'redux-persist'
-import storage from 'redux-persist/lib/storage'
+import storage from 'redux-persist/lib/storage/session'
 import logger from 'redux-logger'
 import thunk from 'redux-thunk'
 import reducers from './reducers'
@@ -30,7 +30,7 @@ const persistConfig = {
     // 某个reducer,不持久化
     // blacklist: ['counter'],
     // 需要持久化的模块
-    whitelist: ['userInfo']
+    whitelist: ['userInfo', 'topics']
 }
 
 const persistedReducer = persistReducer(persistConfig, reducers);

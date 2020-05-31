@@ -7,7 +7,8 @@
 import {
     TOPICS,
     IS_SCROLL,
-    TAB_ACTIVE
+    TAB_ACTIVE,
+    TOPICS_PARAMS
 } from '../actionType'
 
 const initialState = {
@@ -15,7 +16,12 @@ const initialState = {
     datas: [],
     // 是否请求接口
     flag: true,
-    tab: ''
+    tab: '',
+    params: {
+        page: 1,
+        tab: '',
+        limit: 10
+    }
 }
 
 export const topics = (state = initialState, action) => {
@@ -40,10 +46,10 @@ export const topics = (state = initialState, action) => {
                 ...state,
                 flag: action.flag
             }
-        case TAB_ACTIVE:
+        case TOPICS_PARAMS:
             return {
                 ...state,
-                tab: action.tab
+                params: action.params
             }
         default:
             return state

@@ -5,14 +5,13 @@
  * @Last Modified time: 11:21
  */
 import React, {
-    useState,
     useEffect,
     useCallback
 } from 'react'
 import {connect} from 'react-redux';
 import {
     getAllTopics,
-    getTabActive
+    getTopicsParams
 } from '../../store/actions/topics'
 // 头部
 import Header from '../../components/header'
@@ -25,17 +24,13 @@ import PropTypes from 'prop-types'
 import SkeletonList from '../../skeleton/List'
 import './index.scss'
 
-const Home = ({ topics, getAllTopics, flag, getTabActive, tab }) => {
-    const [params, setParams] = useState({
-        page: 1,
-        tab: tab,
-        limit: 10
-    })
+const Home = ({ topics, getAllTopics, flag, getTopicsParams, params, ...rest }) => {
+
     const isScrollLoad = useScollLoad();
 
     useEffect(() => {
         if (isScrollLoad && flag) {
-            setParams({
+            getTopicsParams({
                 ...params,
                 page: params.page + 1
             })
@@ -46,12 +41,14 @@ const Home = ({ topics, getAllTopics, flag, getTabActive, tab }) => {
         if (params.page === 1) {
             window.scrollTo(0, 0)
         }
-        getAllTopics(params)
-    }, [params, getAllTopics])
+        console.log(isScrollLoad, !topics.length, 'isScrollLoad, !topics.length')
+        if (isScrollLoad || params.page === 1) {
+            getAllTopics(params)
+        }
+    }, [params])
 
     const tabChangeHandler = useCallback((value) => {
-        getTabActive(value)
-        setParams({
+        getTopicsParams({
             ...params,
             page: 1,
             tab: value
@@ -60,7 +57,7 @@ const Home = ({ topics, getAllTopics, flag, getTabActive, tab }) => {
 
     return (
         <>
-            <Header tabChangeHandler={tabChangeHandler} tab={tab}></Header>
+            <Header tabChangeHandler={tabChangeHandler} tab={params.tab}></Header>
             {
                 topics.length ?
                     <TopicsList topics={topics}></TopicsList> :
@@ -76,20 +73,24 @@ Home.propTypes = {
     topics: PropTypes.array.isRequired,
     getAllTopics: PropTypes.func.isRequired,
     flag: PropTypes.bool.isRequired,
-    getTabActive: PropTypes.func.isRequired,
-    tab: PropTypes.string.isRequired
+    getTopicsParams: PropTypes.func.isRequired,
+    params: PropTypes.shape({
+        page: PropTypes.number.isRequired,
+        tab: PropTypes.string.isRequired,
+        limit: PropTypes.number.isRequired
+    }).isRequired
 }
 
 const topics = state => ({
     topics: state.topics.datas,
     flag: state.topics.flag,
-    tab: state.topics.tab
+    params: state.topics.params
 })
 
 export default connect(
     topics,
     {
         getAllTopics,
-        getTabActive
+        getTopicsParams
     }
 )(Home)
