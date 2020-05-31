@@ -7,7 +7,6 @@
 import {
     TOPICS,
     IS_SCROLL,
-    TAB_ACTIVE,
     TOPICS_PARAMS
 } from '../actionType'
 

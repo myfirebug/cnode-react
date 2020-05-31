@@ -19,9 +19,9 @@ import {
 } from 'antd-mobile'
 import './index.scss'
 
-const Login = memo(({ accessToken, getUserInfo, location }) => {
+const Login = memo(({ accessToken, getUserInfo, location, ...rest }) => {
     const [token, setToken] = useState('')
-
+    console.log(rest)
     useEffect(() => {
         if (accessToken) {
             createHashHistory().push({

@@ -10,13 +10,19 @@ import React, {
 import PropTypes from 'prop-types'
 import Replay from './Replay'
 
-export const ReplayList = memo(({ list, userInfo }) => {
+export const ReplayList = memo((props) => {
+    const {
+        list,
+        userInfo,
+        setOrCancelCommentLike
+    } = props
     return (
         <div className="cn-replay__list">
             {
                 list.map((item, index) => (
                     <Replay
                         userInfo={userInfo}
+                        setOrCancelCommentLike={setOrCancelCommentLike}
                         number={index}
                         key={item.id}
                         {...item} />
@@ -28,6 +34,7 @@ export const ReplayList = memo(({ list, userInfo }) => {
 
 ReplayList.propTypes = {
     list: PropTypes.array.isRequired,
-    userInfo: PropTypes.object.isRequired
+    userInfo: PropTypes.object.isRequired,
+    setOrCancelCommentLike: PropTypes.func.isRequired
 }
 export default ReplayList

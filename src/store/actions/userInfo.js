@@ -22,6 +22,7 @@ export const getUserInfo = (token, pathname) => (dispatch) => {
                 dispatch(userInfo({
                     avatar_url: res.avatar_url,
                     loginname: res.loginname,
+                    id: res.id,
                     token: token
                 }))
                 createHashHistory().push({

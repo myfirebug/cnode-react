@@ -11,14 +11,14 @@ import PropTypes from 'prop-types'
 import './index.scss'
 import ReplayList from './ReplayList'
 
-export const ReplayWrapper = memo(({ list, userInfo }) => {
+export const ReplayWrapper = memo((props) => {
     return (
         <div className="cn-replay">
             <div className="cn-replay__hd ui-border-tb">
-                共{ list.length }条回复
+                共{ props.list.length }条回复
             </div>
             <div className="cn-replay__bd">
-                <ReplayList list={list} userInfo={userInfo} />
+                <ReplayList { ...props } />
             </div>
         </div>
     )
@@ -26,7 +26,8 @@ export const ReplayWrapper = memo(({ list, userInfo }) => {
 
 ReplayWrapper.propTypes = {
     list: PropTypes.array.isRequired,
-    userInfo: PropTypes.object.isRequired
+    userInfo: PropTypes.object.isRequired,
+    setOrCancelCommentLike: PropTypes.func.isRequired
 }
 
 export default ReplayWrapper

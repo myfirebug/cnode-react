@@ -13,6 +13,15 @@ export const TOPICS_PARAMS = 'TOPICS_PARAMS'
 
 // 主题详情
 export const DETAILS = 'DETAILS'
+// 删除
+export const COMMENT_DELETE = 'COMMENT_DELETE'
+// 编辑
+export const COMMENT_EDIT = 'COMMENT_EDIT'
+// 点赞
+export const COMMENT_LIKE = 'COMMENT_LIKE'
+// 回复
+export const COMMENT_REPLAY = 'COMMENT_REPLAY'
+
 
 // 获取用户信息
 export const USERINFO = 'USERINFO'

@@ -13,7 +13,10 @@ import {
     getUrl,
     fmtDate
 } from '../../util';
-import { getDetails } from '../../store/actions/details'
+import {
+    getDetails,
+    setOrCancelCommentLike
+} from '../../store/actions/details'
 import './index.scss'
 import ReplayWrapper from '../../components/replay'
 // 详情骨架屏
@@ -21,7 +24,7 @@ import SkeletonDetails from '../../skeleton/Details'
 import PropTypes from 'prop-types'
 
 
-const Details = memo(({ details, getDetails, userInfo }) => {
+const Details = memo(({ details, getDetails, userInfo, setOrCancelCommentLike }) => {
     useEffect(() => {
         getDetails(getUrl('id'))
     }, [getDetails])
@@ -55,6 +58,7 @@ const Details = memo(({ details, getDetails, userInfo }) => {
                            details.replies
                                && details.replies.length
                                && <ReplayWrapper
+                               setOrCancelCommentLike={setOrCancelCommentLike}
                                list={details.replies}
                                userInfo={userInfo}>
                            </ReplayWrapper>
@@ -69,7 +73,8 @@ const Details = memo(({ details, getDetails, userInfo }) => {
 Details.propTypes = {
     details: PropTypes.object.isRequired,
     getDetails: PropTypes.func.isRequired,
-    userInfo: PropTypes.object.isRequired
+    userInfo: PropTypes.object.isRequired,
+    setOrCancelCommentLike: PropTypes.func.isRequired
 }
 
 const detailsState = state => ({
@@ -80,6 +85,7 @@ const detailsState = state => ({
 export default connect(
     detailsState,
     {
-        getDetails
+        getDetails,
+        setOrCancelCommentLike
     }
 )(Details)

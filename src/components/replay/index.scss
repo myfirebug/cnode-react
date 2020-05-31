@@ -38,7 +38,11 @@
       span {
         padding-right: 10px;
         margin-right: 10px;
+        cursor: pointer;
         color: $fc07;
+        &:active{
+          color: $fc01;
+        }
       }
       i {
         display: inline-block;
