@@ -28,6 +28,9 @@ const Details = memo(({ details, getDetails, userInfo, setOrCancelCommentLike })
     useEffect(() => {
         getDetails(getUrl('id'))
     }, [getDetails])
+    useEffect(() => {
+        document.title = details.title
+    }, [details])
     return (
         <>
             {

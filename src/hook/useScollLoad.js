@@ -11,6 +11,7 @@ import {
 
 const useScollLoad = () => {
     const [flag, setFlag] = useState(false)
+    const [scrollTop, setScrollTop] = useState(0)
 
     /**
      * [获取滚动条当前的位置]
@@ -50,6 +51,7 @@ const useScollLoad = () => {
      * 判断是否可滚动加载
      */
     const scrollHandler = () => {
+        setScrollTop(getScrollTop())
         if (getScrollTop() + getClientHeight() + 50 > getScrollHeight()) {
             setFlag(true)
         } else {
@@ -64,7 +66,10 @@ const useScollLoad = () => {
         }
     }, [])
 
-    return flag
+    return {
+        flag: flag,
+        scrollTop: scrollTop
+    }
 }
 
 export default useScollLoad

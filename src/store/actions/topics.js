@@ -22,6 +22,13 @@ const topicsParams = params => ({
     params: params
 })
 
+const scrollTop = value => ({
+    type: types.SCROLLTOP,
+    value
+})
+
+
+
 export const  getAllTopics = () => (dispatch, getState) => {
     const state = getState();
     const params = state.topics.params;
@@ -49,4 +56,8 @@ export const  getAllTopics = () => (dispatch, getState) => {
 
 export const getTopicsParams = params => dispatch => {
     dispatch(topicsParams(params))
+}
+
+export const setScrollTop = value => dispatch => {
+    dispatch(scrollTop(value))
 }

@@ -7,7 +7,8 @@
 import {
     TOPICS,
     IS_SCROLL,
-    TOPICS_PARAMS
+    TOPICS_PARAMS,
+    SCROLLTOP
 } from '../actionType'
 
 const initialState = {
@@ -15,12 +16,12 @@ const initialState = {
     datas: [],
     // 是否请求接口
     flag: true,
-    tab: '',
     params: {
         page: 1,
         tab: '',
         limit: 10
-    }
+    },
+    scrollTop: 0
 }
 
 export const topics = (state = initialState, action) => {
@@ -49,6 +50,11 @@ export const topics = (state = initialState, action) => {
             return {
                 ...state,
                 params: action.params
+            }
+        case SCROLLTOP:
+            return {
+                ...state,
+                scrollTop: action.value
             }
         default:
             return state

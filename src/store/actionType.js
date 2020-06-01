@@ -10,6 +10,8 @@ export const TOPICS = 'TOPICS'
 export const IS_SCROLL = 'IS_SCROLL'
 // 请求参数
 export const TOPICS_PARAMS = 'TOPICS_PARAMS'
+// 滚动位置
+export const SCROLLTOP = 'SCROLLTOP'
 
 // 主题详情
 export const DETAILS = 'DETAILS'

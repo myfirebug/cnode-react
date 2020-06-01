@@ -11,7 +11,8 @@ import React, {
 import {connect} from 'react-redux';
 import {
     getAllTopics,
-    getTopicsParams
+    getTopicsParams,
+    setScrollTop
 } from '../../store/actions/topics'
 // 头部
 import Header from '../../components/header'
@@ -24,28 +25,52 @@ import PropTypes from 'prop-types'
 import SkeletonList from '../../skeleton/List'
 import './index.scss'
 
-const Home = ({ topics, getAllTopics, flag, getTopicsParams, params, ...rest }) => {
+const Home = ({ topics, getAllTopics, flag, getTopicsParams, params, scrollTop, setScrollTop }) => {
 
     const isScrollLoad = useScollLoad();
 
+    // 判断是否滚动加载
     useEffect(() => {
-        if (isScrollLoad && flag) {
+        if (isScrollLoad.flag && flag) {
             getTopicsParams({
                 ...params,
                 page: params.page + 1
             })
         }
-    }, [isScrollLoad])
+    }, [isScrollLoad.flag])
 
+    // 记录scrollTop的值
+    useEffect(() => {
+        let timmer = null
+        if (timmer) {
+            clearTimeout(timmer)
+        }
+        timmer = setTimeout(() => {
+            setScrollTop(isScrollLoad.scrollTop)
+        }, 200)
+        return () => {
+            if (timmer) {
+                clearTimeout(timmer)
+            }
+        }
+    }, [isScrollLoad.scrollTop, setScrollTop])
+
+    // 请求数据
     useEffect(() => {
         if (params.page === 1) {
             window.scrollTo(0, 0)
         }
-        console.log(isScrollLoad, !topics.length, 'isScrollLoad, !topics.length')
-        if (isScrollLoad || params.page === 1) {
+        if (isScrollLoad.flag || params.page === 1) {
             getAllTopics(params)
         }
     }, [params])
+
+    useEffect(() => {
+        if (params.page !== 1) {
+            window.scrollTo(0, scrollTop)
+        }
+        document.title = 'CNODE社区'
+    }, [])
 
     const tabChangeHandler = useCallback((value) => {
         getTopicsParams({
@@ -74,6 +99,8 @@ Home.propTypes = {
     getAllTopics: PropTypes.func.isRequired,
     flag: PropTypes.bool.isRequired,
     getTopicsParams: PropTypes.func.isRequired,
+    scrollTop: PropTypes.number.isRequired,
+    setScrollTop: PropTypes.func.isRequired,
     params: PropTypes.shape({
         page: PropTypes.number.isRequired,
         tab: PropTypes.string.isRequired,
@@ -84,13 +111,15 @@ Home.propTypes = {
 const topics = state => ({
     topics: state.topics.datas,
     flag: state.topics.flag,
-    params: state.topics.params
+    params: state.topics.params,
+    scrollTop: state.topics.scrollTop
 })
 
 export default connect(
     topics,
     {
         getAllTopics,
-        getTopicsParams
+        getTopicsParams,
+        setScrollTop
     }
 )(Home)
