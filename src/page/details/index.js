@@ -6,7 +6,8 @@
  */
 import React, {
     memo,
-    useEffect
+    useEffect,
+    useCallback
 } from 'react'
 import {connect} from 'react-redux';
 import {
@@ -15,22 +16,40 @@ import {
 } from '../../util';
 import {
     getDetails,
-    setOrCancelCommentLike
+    setOrCancelCommentLike,
+    setCommentDelete
 } from '../../store/actions/details'
+import {
+    setOrCancelCollect
+} from '../../store/actions/collect'
 import './index.scss'
 import ReplayWrapper from '../../components/replay'
 // 详情骨架屏
 import SkeletonDetails from '../../skeleton/Details'
 import PropTypes from 'prop-types'
+import {
+    Toast
+} from 'antd-mobile'
 
 
-const Details = memo(({ details, getDetails, userInfo, setOrCancelCommentLike }) => {
+const Details = memo(({details, getDetails, userInfo, setOrCancelCommentLike, setCommentDelete, setOrCancelCollect }) => {
     useEffect(() => {
         getDetails(getUrl('id'))
     }, [getDetails])
-    useEffect(() => {
-        document.title = details.title
-    }, [details])
+    const operationHandler = useCallback((type) => {
+        switch (type) {
+            case 'comments':
+                Toast.info('功能正在开发中')
+                break
+            case 'collection':
+                setOrCancelCollect({
+                    accesstoken: userInfo.token,
+                    topic_id: details.id
+                })
+                break
+            default:
+        }
+    }, [details, userInfo])
     return (
         <>
             {
@@ -61,12 +80,29 @@ const Details = memo(({ details, getDetails, userInfo, setOrCancelCommentLike })
                            details.replies
                                && details.replies.length
                                && <ReplayWrapper
+                               setCommentDelete={setCommentDelete}
                                setOrCancelCommentLike={setOrCancelCommentLike}
                                list={details.replies}
                                userInfo={userInfo}>
                            </ReplayWrapper>
                        }
-                       <div className="cn-details__ft"></div>
+                       {
+                           userInfo.token
+                           && userInfo.id ?
+                               <div className="cn-details__ft">
+                            <span
+                                className="comments"
+                                onClick={() => operationHandler('comments')}>
+                                评论
+                            </span>
+                                   <span
+                                       className="collection"
+                                       onClick={() => operationHandler('collection')}>
+                               { details.is_collect ? '取消' : '' }
+                                       收藏
+                           </span>
+                               </div> : null
+                       }
                    </div> : <SkeletonDetails />
             }
         </>
@@ -77,7 +113,8 @@ Details.propTypes = {
     details: PropTypes.object.isRequired,
     getDetails: PropTypes.func.isRequired,
     userInfo: PropTypes.object.isRequired,
-    setOrCancelCommentLike: PropTypes.func.isRequired
+    setOrCancelCommentLike: PropTypes.func.isRequired,
+    setCommentDelete: PropTypes.func.isRequired
 }
 
 const detailsState = state => ({
@@ -89,6 +126,8 @@ export default connect(
     detailsState,
     {
         getDetails,
-        setOrCancelCommentLike
+        setOrCancelCommentLike,
+        setCommentDelete,
+        setOrCancelCollect
     }
 )(Details)

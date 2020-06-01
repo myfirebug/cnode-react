@@ -1,0 +1,62 @@
+@include b(my){
+  @include e(hd){
+    display: flex;
+    align-items: center;
+    padding:25px 15px;
+    background: $bg04;
+    .user-avatar{
+      width: 60px;
+      height: 60px;
+      margin-right: 10px;
+      border-radius: 5px;
+      background:#eee;
+      overflow: hidden;
+    }
+    .user-name{
+      font-size: $f40;
+      font-weight: bold;
+    }
+    .integral{
+      font-size: $f26;
+      color:$fc07;
+    }
+  }
+  @include e(bd){
+    margin-top: 10px;
+    background: $bg04;
+  }
+  @include e(item){
+    height: 50px;
+    line-height: 50px;
+    a{
+      position: relative;
+      z-index: 10;
+      display: block;
+      padding:0 15px;
+      &:active{
+        background:#f5f5f5;
+      }
+      &:before{
+        content: '';
+        position: absolute;
+        right: 15px;
+        top:50%;
+        margin-top:-3px;
+        width: 5px;
+        height: 5px;
+        border:2px solid transparent;
+        border-left-color:$bor03;
+        border-bottom-color:$bor03;
+        transform: rotate(-135deg);
+        border-radius: 2px;
+      }
+    }
+  }
+  @include e(ft){
+    margin-top:10px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background:#fff;
+  }
+}

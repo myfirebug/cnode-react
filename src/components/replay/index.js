@@ -27,7 +27,8 @@ export const ReplayWrapper = memo((props) => {
 ReplayWrapper.propTypes = {
     list: PropTypes.array.isRequired,
     userInfo: PropTypes.object.isRequired,
-    setOrCancelCommentLike: PropTypes.func.isRequired
+    setOrCancelCommentLike: PropTypes.func.isRequired,
+    setCommentDelete: PropTypes.func.isRequired
 }
 
 export default ReplayWrapper

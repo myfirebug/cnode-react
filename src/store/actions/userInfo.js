@@ -31,3 +31,7 @@ export const getUserInfo = (token, pathname) => (dispatch) => {
             }
         })
 }
+
+export const loginOut = () => dispatch => {
+    dispatch(userInfo({}))
+}

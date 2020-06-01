@@ -9,7 +9,7 @@
   @include e(item){
     padding: 15px 15px;
     .content{
-      padding:10px 0 .3rem 35px;
+      padding:10px 0 15px 35px;
       color:#666;
       font-size: $f28;
     }
@@ -36,7 +36,6 @@
       font-size: $f26;
       line-height: 1;
       span {
-        padding-right: 10px;
         margin-right: 10px;
         cursor: pointer;
         color: $fc07;

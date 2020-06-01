@@ -22,11 +22,6 @@ const Footer = memo(({ hash }) => {
             path: '/home'
         },
         {
-            icon: '&#xe6b9;',
-            name: '发表',
-            path: '/publish'
-        },
-        {
             icon: '&#xe68a;',
             name: '消息',
             path: '/message'
@@ -34,7 +29,7 @@ const Footer = memo(({ hash }) => {
         {
             icon: '&#xe6a1;',
             name: '我的',
-            path: '/my'
+            path: '/user'
         }
     ])
     return (

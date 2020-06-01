@@ -14,7 +14,8 @@ export const ReplayList = memo((props) => {
     const {
         list,
         userInfo,
-        setOrCancelCommentLike
+        setOrCancelCommentLike,
+        setCommentDelete
     } = props
     return (
         <div className="cn-replay__list">
@@ -23,6 +24,7 @@ export const ReplayList = memo((props) => {
                     <Replay
                         userInfo={userInfo}
                         setOrCancelCommentLike={setOrCancelCommentLike}
+                        setCommentDelete={setCommentDelete}
                         number={index}
                         key={item.id}
                         {...item} />
@@ -35,6 +37,7 @@ export const ReplayList = memo((props) => {
 ReplayList.propTypes = {
     list: PropTypes.array.isRequired,
     userInfo: PropTypes.object.isRequired,
-    setOrCancelCommentLike: PropTypes.func.isRequired
+    setOrCancelCommentLike: PropTypes.func.isRequired,
+    setCommentDelete: PropTypes.func.isRequired
 }
 export default ReplayList

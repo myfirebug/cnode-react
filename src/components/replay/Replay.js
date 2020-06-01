@@ -12,6 +12,9 @@ import LazyLoad from 'react-lazyload'
 import {
     timeAgo
 } from '../../util'
+import {
+    Toast
+} from 'antd-mobile'
 
 export const Replay = (props) => {
     const {
@@ -25,12 +28,17 @@ export const Replay = (props) => {
         content,
         userInfo,
         ups,
-        setOrCancelCommentLike
+        setOrCancelCommentLike,
+        setCommentDelete
     } = props
 
     const operationHandler = useCallback((type) => {
         switch(type) {
             case 'delete':
+                setCommentDelete({
+                    userId: userInfo.id,
+                    replayId: id
+                })
                 break
             case 'like':
                 setOrCancelCommentLike({
@@ -39,8 +47,10 @@ export const Replay = (props) => {
                 })
                 break
             case 'edit':
+                Toast.info('功能正在开发中', 1.5)
                 break
             case 'reply':
+                Toast.info('功能正在开发中', 1.5)
                 break
             default:
                 break
@@ -68,7 +78,7 @@ export const Replay = (props) => {
                         userInfo.loginname === loginname
                         && userInfo.token ?
                             <>
-                                <span className="ui-border-r" onClick={() => operationHandler('delete')}>
+                                <span onClick={() => operationHandler('delete')}>
                                     <i className="ued-mobile">&#xe78c;</i>
                                     删除
                                 </span>
@@ -78,7 +88,7 @@ export const Replay = (props) => {
                                 </span>
                             </> : null
                     }
-                    <span className="ui-border-r" onClick={() => operationHandler('like')}>
+                    <span onClick={() => operationHandler('like')}>
                         <i className="ued-mobile">&#xe643;</i>
                         {
                             ups.indexOf(userInfo.id) !== -1 ? '取消' : ''

@@ -6,7 +6,9 @@
  */
 import {
     DETAILS,
-    COMMENT_LIKE
+    COMMENT_LIKE,
+    COMMENT_DELETE,
+    SET_COLLECT
 } from '../actionType'
 
 import {
@@ -14,11 +16,12 @@ import {
 } from 'antd-mobile'
 
 export const details = (state = {}, action) => {
+    // 获取评论列表
+    const comments = state.replies
     switch (action.type) {
         case DETAILS:
             return action.data
         case COMMENT_LIKE:
-            const comments = state.replies
             // 找到需要点赞或者取消点赞的评论下标
             const replayIndex = comments.findIndex(item => {
                 return item.id === action.payload.replayId
@@ -44,6 +47,26 @@ export const details = (state = {}, action) => {
                 replies: [
                     ...comments
                 ]
+            }
+        case COMMENT_DELETE:
+            // 找到需要删除ID的下标
+            const deleteIndex = comments.findIndex(item => {
+                return item.id === action.payload.replayId
+            })
+            if (deleteIndex >= 0) {
+                comments.splice(deleteIndex, 1)
+                Toast.success('删除成功', 1.5)
+            }
+            return {
+                ...state,
+                replies: [
+                    ...comments
+                ]
+            }
+        case SET_COLLECT:
+            return {
+                ...state,
+                is_collect: action.flag
             }
         default:
             return state

@@ -17,13 +17,10 @@ import {
 // 头部
 import Header from '../../components/header'
 // 列表
-import TopicsList from './TopicsList'
+import TopicsList from '../../components/topics/TopicsList'
 // 是否可滚动加载
 import useScollLoad from '../../hook/useScollLoad'
 import PropTypes from 'prop-types'
-// 列表骨架屏
-import SkeletonList from '../../skeleton/List'
-import './index.scss'
 
 const Home = ({ topics, getAllTopics, flag, getTopicsParams, params, scrollTop, setScrollTop }) => {
 
@@ -69,7 +66,6 @@ const Home = ({ topics, getAllTopics, flag, getTopicsParams, params, scrollTop, 
         if (params.page !== 1) {
             window.scrollTo(0, scrollTop)
         }
-        document.title = 'CNODE社区'
     }, [])
 
     const tabChangeHandler = useCallback((value) => {
@@ -83,13 +79,7 @@ const Home = ({ topics, getAllTopics, flag, getTopicsParams, params, scrollTop, 
     return (
         <>
             <Header tabChangeHandler={tabChangeHandler} tab={params.tab}></Header>
-            {
-                topics.length ?
-                    <TopicsList topics={topics}></TopicsList> :
-                    <SkeletonList style={{
-                        padding: '55px 15px 0 15px'
-                    }} />
-            }
+            <TopicsList topics={topics} />
         </>
     )
 }

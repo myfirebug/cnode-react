@@ -28,7 +28,6 @@ const Login = memo(({ accessToken, getUserInfo, location, ...rest }) => {
                 pathname: '/home'
             })
         }
-        document.title = '登录'
     }, [])
 
     const getToken = useCallback((e) => {

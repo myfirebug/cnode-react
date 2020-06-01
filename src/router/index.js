@@ -33,12 +33,22 @@ const routerList = [
     {
         private: true,
         component: lazy(() => import(/*webpackChunkName:"my"*/'../page/my')),
-        pathname: '/my'
+        pathname: '/user'
     },
     {
         private: false,
         component: lazy(() => import(/*webpackChunkName:"my"*/'../page/login')),
         pathname: '/login'
+    },
+    {
+        private: true,
+        component: lazy(() => import(/*webpackChunkName:"myList"*/'../page/my-list')),
+        pathname: '/my-list'
+    },
+    {
+        private: true,
+        component: lazy(() => import(/*webpackChunkName:"collect"*/'../page/collect')),
+        pathname: '/collect'
     }
 ]
 const Routers = () => {
@@ -68,7 +78,7 @@ const Routers = () => {
                     </Switch>
                     {
                         hash.indexOf('/home') !== -1 ||
-                        hash.indexOf('/my') !== -1 ?
+                        hash.indexOf('/user') !== -1 ?
                             <Footer hash={hash} /> : null
                     }
 

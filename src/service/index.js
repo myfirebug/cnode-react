@@ -18,5 +18,17 @@ export default {
     },
     login(params) {
         return post('/accesstoken', params,'api')
+    },
+    user(username) {
+        return get(`/user/${username}`, '','api')
+    },
+    collect(params) {
+        return post('/topic_collect/collect', params,'api')
+    },
+    de_collect(params) {
+        return post('/topic_collect/de_collect ', params,'api')
+    },
+    myCollect(username) {
+        return get(`/topic_collect/${username}`, '','api')
     }
 }

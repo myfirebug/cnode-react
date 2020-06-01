@@ -17,15 +17,16 @@ const commentLike = payload => ({
     payload
 })
 
+const commentDelete = payload => ({
+    type: types.COMMENT_DELETE,
+    payload
+})
 
 /**
  * 获取详情
- * @param {*} id 
+ * @param {*} id
  */
-export const  getDetails = id => (dispatch, getState) => {
-    if (JSON.stringify(getState().details) !== '{}') {
-        dispatch(details({}))
-    }
+export const  getDetails = id => (dispatch) => {
     Ajax.getDetails(id)
         .then(res => {
             dispatch(details(res.data))
@@ -34,8 +35,16 @@ export const  getDetails = id => (dispatch, getState) => {
 
 /**
  * 点赞或者取消点赞
- * @param {*} id 
+ * @param {*} id
  */
 export const setOrCancelCommentLike = params => dispatch => {
     dispatch(commentLike(params))
+}
+
+/**
+ * 删除
+ * @param {*} id
+ */
+export const setCommentDelete = params => dispatch => {
+    dispatch(commentDelete(params))
 }

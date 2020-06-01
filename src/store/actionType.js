@@ -27,3 +27,11 @@ export const COMMENT_REPLAY = 'COMMENT_REPLAY'
 
 // 获取用户信息
 export const USERINFO = 'USERINFO'
+
+// 我的
+export const USER_CENTER = 'USER_CENTER'
+
+// 收藏
+export const SET_COLLECT = 'SET_COLLECT'
+// 收藏列表
+export const COLLECT_LIST = 'COLLECT_LIST'

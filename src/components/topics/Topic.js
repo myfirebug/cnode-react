@@ -14,6 +14,7 @@ import {
 import PropTypes from 'prop-types'
 import LazyLoad from 'react-lazyload'
 import {
+    timeAgo,
     fmtDate
 } from '../../util'
 
@@ -72,27 +73,34 @@ const Topic = memo((props) => {
                     </div>
                     <div className="user-info">
                         <p className="user-name">{ loginname }</p>
-                        <p className="create-at">{ fmtDate(new Date(create_at), 'yyyy-MM-dd hh:ss:mm') }</p>
+                        <p className="create-at">{ create_at ? timeAgo(create_at) : timeAgo(last_reply_at) }</p>
                     </div>
                 </div>
                 <div className="cn-topics-item__bd">
-                    <span className="put-top">{ getLabel }</span>
+                    {
+                        create_at ?
+                            <span className="put-top">{ getLabel }</span> : null
+                    }
                     { title }
                 </div>
-                <div className="cn-topics-item__ft">
+                {
+                    create_at ?
+                        <div className="cn-topics-item__ft">
                     <span>
                         <i className="ued-mobile">&#xe666;</i>
                         { reply_count }
                      </span>
-                    <span>
+                            <span>
                         <i className="ued-mobile">&#xe637;</i>
-                        { visit_count }
+                                { visit_count }
                     </span>
-                    <span>
+                            <span>
                         <i className="ued-mobile">&#xe78b;</i>
-                        { fmtDate(new Date(last_reply_at), 'yyyy-MM-dd hh:ss:mm') }
+                                { fmtDate(new Date(last_reply_at), 'yyyy-MM-dd hh:ss:mm') }
                     </span>
-                </div>
+                        </div> : null
+                }
+
             </Link>
         </li>
     )
@@ -104,10 +112,10 @@ Topic.propTypes = {
         avatar_url: PropTypes.string.isRequired,
         loginname: PropTypes.string.isRequired
     }).isRequired,
-    create_at: PropTypes.string.isRequired,
+    create_at: PropTypes.string,
     title: PropTypes.string.isRequired,
-    reply_count: PropTypes.number.isRequired,
-    visit_count: PropTypes.number.isRequired,
+    reply_count: PropTypes.number,
+    visit_count: PropTypes.number,
     last_reply_at: PropTypes.string.isRequired
 }
 
