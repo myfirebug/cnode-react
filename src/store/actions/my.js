@@ -14,13 +14,16 @@ const userCenter = data => ({
 
 export const getUserCenterInfo = username => (dispatch, getState) => {
     const state = getState()
+    if (!username && !state.userInfo.loginname) {
+        dispatch(userCenter({}))
+        return
+    }
     if (!username) {
         username = state.userInfo.loginname
     }
     Ajax.user(username)
         .then(res => {
             if (res.success) {
-                console.log(res.data)
                 dispatch(userCenter(res.data))
             }
         })

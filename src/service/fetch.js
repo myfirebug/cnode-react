@@ -16,7 +16,7 @@ const getService = (serviceUrl) => {
         axios.defaults.baseURL = config.development[serviceUrl]
     } else if (ENV === 'production') {
         // production, online
-        axios.defaults.baseURL = config.online[serviceUrl]
+        axios.defaults.baseURL = config.production[serviceUrl]
     }
 }
 // 请求超时

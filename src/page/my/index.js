@@ -33,10 +33,7 @@ const My = memo(({ user, getUserCenterInfo, userInfo, loginOut, ...rest }) => {
     } = user
 
     useEffect(() => {
-        if (getUrl('username') || userInfo.loginname) {
-            getUserCenterInfo(getUrl('username'))
-        }
-        
+        getUserCenterInfo(getUrl('username'))
     }, [])
     return (
         <>
@@ -47,8 +44,8 @@ const My = memo(({ user, getUserCenterInfo, userInfo, loginOut, ...rest }) => {
                 </div>
                 <div className="user-info">
                     {
-                        userInfo.loginname ?
-                        <p className="user-name">{userInfo.loginname ? loginname : '登录'}</p> :
+                        loginname ?
+                        <p className="user-name">{loginname}</p> :
                         <Link className="user-name" to={{
                             pathname: '/login',
                             state: { from: '/my' }
