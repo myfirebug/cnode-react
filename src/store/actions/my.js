@@ -12,7 +12,11 @@ const userCenter = data => ({
     data
 })
 
-export const getUserCenterInfo = username => dispatch => {
+export const getUserCenterInfo = username => (dispatch, getState) => {
+    const state = getState()
+    if (!username) {
+        username = state.userInfo.loginname
+    }
     Ajax.user(username)
         .then(res => {
             if (res.success) {

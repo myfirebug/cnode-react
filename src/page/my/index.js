@@ -17,6 +17,7 @@ import { getUserCenterInfo } from '../../store/actions/my'
 import {
     loginOut
 } from '../../store/actions/userInfo'
+import Footer from "../../components/footer";
 
 const My = memo(({ user, getUserCenterInfo, userInfo, loginOut }) => {
     const {
@@ -28,11 +29,13 @@ const My = memo(({ user, getUserCenterInfo, userInfo, loginOut }) => {
         loginname,
         avatar_url
     } = userInfo
+
     useEffect(() => {
-        getUserCenterInfo(loginname)
+        getUserCenterInfo()
     }, [])
     return (
-        <div className="cn-my">
+        <>
+            <div className="cn-my">
             <div className="cn-my__hd ui-border-b">
                 <div className="user-avatar">
                     <img src={avatar_url} alt={loginname}/>
@@ -67,6 +70,8 @@ const My = memo(({ user, getUserCenterInfo, userInfo, loginOut }) => {
             </ul>
             <div className="cn-my__ft ui-border-tb" onClick={() => loginOut()}>退出登录</div>
         </div>
+            <Footer hash='/my' />
+        </>
     )
 })
 

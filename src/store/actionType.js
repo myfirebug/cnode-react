@@ -35,3 +35,6 @@ export const USER_CENTER = 'USER_CENTER'
 export const SET_COLLECT = 'SET_COLLECT'
 // 收藏列表
 export const COLLECT_LIST = 'COLLECT_LIST'
+
+// 我的消息
+export const MESSAGES = 'MESSAGES'

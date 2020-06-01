@@ -30,5 +30,8 @@ export default {
     },
     myCollect(username) {
         return get(`/topic_collect/${username}`, '','api')
+    },
+    messages(params) {
+        return get('messages', params,'api')
     }
 }

@@ -29,7 +29,7 @@ const Footer = memo(({ hash }) => {
         {
             icon: '&#xe6a1;',
             name: '我的',
-            path: '/user'
+            path: '/my'
         }
     ])
     return (

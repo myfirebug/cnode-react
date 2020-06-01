@@ -21,6 +21,7 @@ import TopicsList from '../../components/topics/TopicsList'
 // 是否可滚动加载
 import useScollLoad from '../../hook/useScollLoad'
 import PropTypes from 'prop-types'
+import Footer from '../../components/footer'
 
 const Home = ({ topics, getAllTopics, flag, getTopicsParams, params, scrollTop, setScrollTop }) => {
 
@@ -80,6 +81,7 @@ const Home = ({ topics, getAllTopics, flag, getTopicsParams, params, scrollTop, 
         <>
             <Header tabChangeHandler={tabChangeHandler} tab={params.tab}></Header>
             <TopicsList topics={topics} />
+            <Footer hash='/home' />
         </>
     )
 }

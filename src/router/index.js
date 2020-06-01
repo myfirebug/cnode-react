@@ -14,9 +14,7 @@ import {
     Switch,
     Redirect
 } from 'react-router-dom'
-import useHash from '../hook/useHash'
 import ErrorBoundary from '../components/errorBoundary'
-import Footer from '../components/footer'
 import PrivateRoute from '../components/PrivateRoute'
 
 const routerList = [
@@ -29,6 +27,11 @@ const routerList = [
         private: false,
         component: lazy(() => import(/*webpackChunkName:"details"*/'../page/details')),
         pathname: '/details'
+    },
+    {
+        private: true,
+        component: lazy(() => import(/*webpackChunkName:"my"*/'../page/my')),
+        pathname: '/my'
     },
     {
         private: true,
@@ -49,10 +52,14 @@ const routerList = [
         private: true,
         component: lazy(() => import(/*webpackChunkName:"collect"*/'../page/collect')),
         pathname: '/collect'
+    },
+    {
+        private: true,
+        component: lazy(() => import(/*webpackChunkName:"message"*/'../page/message')),
+        pathname: '/message'
     }
 ]
 const Routers = () => {
-    const hash = useHash()
     return (
         <HashRouter>
             <ErrorBoundary>
@@ -76,12 +83,6 @@ const Routers = () => {
                         }
                         <Redirect to='/home' />
                     </Switch>
-                    {
-                        hash.indexOf('/home') !== -1 ||
-                        hash.indexOf('/user') !== -1 ?
-                            <Footer hash={hash} /> : null
-                    }
-
                 </Suspense>
             </ErrorBoundary>
         </HashRouter>

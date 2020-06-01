@@ -10,11 +10,13 @@ import { details } from './details';
 import { userInfo } from './userInfo';
 import { user } from './my';
 import { collects } from './collect';
+import { messages } from './message';
 
 export default combineReducers({
     topics,
     details,
     userInfo,
     user,
-    collects
+    collects,
+    messages
 })
