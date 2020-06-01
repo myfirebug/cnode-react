@@ -4,9 +4,9 @@
 }
 @include b(topics-item){
   transition: all .25s ease 0s;
+  padding:10px 15px;
   a{
     display: block;
-    padding:10px 15px;
     color:#333;
     text-decoration: none;
   }

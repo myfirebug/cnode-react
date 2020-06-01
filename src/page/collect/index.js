@@ -13,12 +13,15 @@ import {
     getUserCollects
 } from '../../store/actions/collect'
 import TopicsList from '../../components/topics/TopicsList'
+import {
+    getUrl
+} from '../../util'
 
 
-const Collect = memo(({userInfo, getUserCollects, topics }) => {
+const Collect = memo(({getUserCollects, topics }) => {
     useEffect(() => {
-        getUserCollects(userInfo.loginname)
-    }, [userInfo])
+        getUserCollects(getUrl('username'))
+    }, [])
     return (
         <TopicsList topics={topics} style={{
             padding: 0
@@ -27,7 +30,6 @@ const Collect = memo(({userInfo, getUserCollects, topics }) => {
 })
 
 const collectState = state => ({
-    userInfo: state.userInfo,
     topics: state.collects
 })
 

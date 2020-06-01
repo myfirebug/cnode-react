@@ -15,6 +15,9 @@ import {
 import {
     Toast
 } from 'antd-mobile'
+import {
+    Link
+} from 'react-router-dom'
 
 export const Replay = (props) => {
     const {
@@ -59,17 +62,22 @@ export const Replay = (props) => {
 
     return (
         <li className="cn-replay__item ui-border-b">
-            <div className="author_content">
-                <div className="user-avatar">
-                    <LazyLoad>
-                        <img src={ avatar_url } alt="" />
-                    </LazyLoad>
+            <Link to={{
+                pathname: '/my',
+                search: `username=${loginname}`
+            }}>
+                <div className="author_content">
+                    <div className="user-avatar">
+                        <LazyLoad>
+                            <img src={ avatar_url } alt="" />
+                        </LazyLoad>
+                    </div>
+                    <div className="user-info">
+                        <span className="user-name">{loginname}</span>
+                        <span className="reply-time">{ number }楼•{timeAgo(create_at)}</span>
+                    </div>
                 </div>
-                <div className="user-info">
-                    <span className="user-name">{loginname}</span>
-                    <span className="reply-time">{ number }楼•{timeAgo(create_at)}</span>
-                </div>
-            </div>
+            </Link>
             <div className="content" dangerouslySetInnerHTML={{__html: `${content}`}}></div>
             {
                 userInfo.id && userInfo.token &&

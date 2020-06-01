@@ -60,10 +60,10 @@ const Topic = memo((props) => {
     }, [good, tab, top])
 
     return (
-        <li className="cn-topics-item">
-            <Link className="ui-border-b" to={{
-                pathname: '/details',
-                search: `id=${id}`
+        <li className="cn-topics-item ui-border-b">
+            <Link to={{
+                pathname: '/my',
+                search: `username=${loginname}`
             }}>
                 <div className="cn-topics-item__hd">
                     <div className="user-avatar">
@@ -73,35 +73,35 @@ const Topic = memo((props) => {
                     </div>
                     <div className="user-info">
                         <p className="user-name">{ loginname }</p>
-                        <p className="create-at">{ create_at ? timeAgo(create_at) : timeAgo(last_reply_at) }</p>
+                        <p className="create-at">{ timeAgo(last_reply_at) }</p>
                     </div>
                 </div>
+            </Link>
+            <Link to={{
+                pathname: '/details',
+                search: `id=${id}`
+            }}>
                 <div className="cn-topics-item__bd">
                     {
-                        create_at ?
+                        good || top || tab ?
                             <span className="put-top">{ getLabel }</span> : null
                     }
                     { title }
                 </div>
-                {
-                    create_at ?
-                        <div className="cn-topics-item__ft">
-                    <span>
-                        <i className="ued-mobile">&#xe666;</i>
-                        { reply_count }
-                     </span>
-                            <span>
-                        <i className="ued-mobile">&#xe637;</i>
-                                { visit_count }
-                    </span>
-                            <span>
-                        <i className="ued-mobile">&#xe78b;</i>
-                                { fmtDate(new Date(last_reply_at), 'yyyy-MM-dd hh:ss:mm') }
-                    </span>
-                        </div> : null
-                }
-
             </Link>
+            {
+                (reply_count !== undefined && visit_count !== undefined) ?
+                    <div className="cn-topics-item__ft">
+                        <span>
+                            <i className="ued-mobile">&#xe666;</i>
+                            { reply_count }
+                        </span>
+                        <span>
+                            <i className="ued-mobile">&#xe637;</i>
+                            { visit_count }
+                        </span>
+                    </div> : null
+            }
         </li>
     )
 })

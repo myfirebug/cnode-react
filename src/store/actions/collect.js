@@ -6,6 +6,9 @@
  */
 import * as types from "../actionType";
 import Ajax from "../../service";
+import {
+    Toast
+} from 'antd-mobile'
 
 const setCollect = flag => ({
     type: types.SET_COLLECT,
@@ -27,11 +30,13 @@ export const setOrCancelCollect = params => (dispatch, getState) => {
         Ajax.de_collect(params)
             .then(() => {
                 dispatch(setCollect(false))
+                Toast.success('取消收藏成功', 1.5)
             })
     } else {
         Ajax.collect(params)
             .then(() => {
                 dispatch(setCollect(true))
+                Toast.success('收藏成功', 1.5)
             })
     }
 }

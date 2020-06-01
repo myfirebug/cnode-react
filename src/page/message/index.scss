@@ -1,0 +1,10 @@
+@include b(message) {
+    background: $bg04;
+    @include e(item){
+        padding:15px 15px;
+        line-height: 24px;
+        a{
+            color:$btn01;
+        }
+    }
+}

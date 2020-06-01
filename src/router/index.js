@@ -29,14 +29,9 @@ const routerList = [
         pathname: '/details'
     },
     {
-        private: true,
+        private: false,
         component: lazy(() => import(/*webpackChunkName:"my"*/'../page/my')),
         pathname: '/my'
-    },
-    {
-        private: true,
-        component: lazy(() => import(/*webpackChunkName:"my"*/'../page/my')),
-        pathname: '/user'
     },
     {
         private: false,
@@ -44,7 +39,7 @@ const routerList = [
         pathname: '/login'
     },
     {
-        private: true,
+        private: false,
         component: lazy(() => import(/*webpackChunkName:"myList"*/'../page/my-list')),
         pathname: '/my-list'
     },
