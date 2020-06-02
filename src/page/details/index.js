@@ -114,7 +114,8 @@ Details.propTypes = {
     getDetails: PropTypes.func.isRequired,
     userInfo: PropTypes.object.isRequired,
     setOrCancelCommentLike: PropTypes.func.isRequired,
-    setCommentDelete: PropTypes.func.isRequired
+    setCommentDelete: PropTypes.func.isRequired,
+    setOrCancelCollect: PropTypes.func.isRequired
 }
 
 const detailsState = state => ({

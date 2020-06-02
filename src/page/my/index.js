@@ -21,9 +21,9 @@ import Footer from "../../components/footer"
 import {
     getUrl
 } from '../../util'
+import PropTypes from 'prop-types'
 
-const My = memo(({ user, getUserCenterInfo, userInfo, loginOut, ...rest }) => {
-    console.log(rest)
+const My = memo(({ user, getUserCenterInfo, userInfo, loginOut }) => {
     const {
         loginname,
         avatar_url,
@@ -45,44 +45,49 @@ const My = memo(({ user, getUserCenterInfo, userInfo, loginOut, ...rest }) => {
                 <div className="user-info">
                     {
                         loginname ?
-                        <p className="user-name">{loginname}</p> :
+                        <>
+                            <p className="user-name">{loginname}</p>
+                            <p className="integral">积分：{score || 0}</p>
+                        </> :
                         <Link className="user-name" to={{
                             pathname: '/login',
                             state: { from: '/my' }
                         }}>登录</Link>
                     }
-                    <p className="integral">积分：{score || 0}</p>
                 </div>
             </div>
-            <ul className="cn-my__bd ui-border-t">
-                <li className="cn-my__item ui-border-b">
-                    <Link to={{
-                        pathname: '/my-list',
-                        state: {
-                            data: recent_replies
-                        }
-                    }}>最新创建的话题</Link>
-                </li>
-                <li className="cn-my__item ui-border-b">
-                    <Link to={{
-                        pathname: '/my-list',
-                        state: {
-                            data: recent_topics
-                        }
-                    }}>最近参与的话题</Link>
-                </li>
-                <li className="cn-my__item ui-border-b">
-                        <Link to={{
-                            pathname: '/collect',
-                            search: `username=${loginname}`
-                        }}>{ loginname === userInfo.loginname && !!userInfo.loginname ? '我' : '他' }收藏的</Link>
-                    </li>
-                
-            </ul>
+            {
+                loginname ?
+                    <ul className="cn-my__bd ui-border-t">
+                        <li className="cn-my__item ui-border-b">
+                            <Link to={{
+                                pathname: '/my-list',
+                                state: {
+                                    data: recent_replies
+                                }
+                            }}>最新创建的话题</Link>
+                        </li>
+                        <li className="cn-my__item ui-border-b">
+                            <Link to={{
+                                pathname: '/my-list',
+                                state: {
+                                    data: recent_topics
+                                }
+                            }}>最近参与的话题</Link>
+                        </li>
+                        <li className="cn-my__item ui-border-b">
+                            <Link to={{
+                                pathname: '/collect',
+                                search: `username=${loginname}`}}>收藏的</Link>
+                        </li>
+                    </ul> : null
+            }
             {
                 !!userInfo.loginname &&
                 loginname === userInfo.loginname ?
-                <div className="cn-my__ft ui-border-tb" onClick={() => loginOut()}>退出登录</div> : 
+                <>
+                    <div className="cn-my__ft ui-border-tb" onClick={() => loginOut()}>退出登录</div>
+                </> :
                 null
             }
         </div>
@@ -95,7 +100,12 @@ const My = memo(({ user, getUserCenterInfo, userInfo, loginOut, ...rest }) => {
     )
 })
 
-
+My.propTypes = {
+    user: PropTypes.object.isRequired,
+    getUserCenterInfo: PropTypes.func.isRequired,
+    userInfo: PropTypes.object.isRequired,
+    loginOut: PropTypes.func.isRequired
+}
 
 const userProps = state => ({
     user: state.user,

@@ -50,7 +50,9 @@ export const  getAllTopics = () => (dispatch, getState) => {
                     topics: res.data,
                     flag: params.page === 1 ? true : false
                 }))
-            })
+            }).catch(() => {
+            dispatch(isScroll(true))
+        })
     }
 }
 

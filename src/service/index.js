@@ -33,5 +33,8 @@ export default {
     },
     messages(params) {
         return get('messages', params,'api')
+    },
+    markOne(id, params) {
+        return post(`/message/mark_one/${id}`, params,'api')
     }
 }

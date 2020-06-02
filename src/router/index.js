@@ -44,7 +44,7 @@ const routerList = [
         pathname: '/my-list'
     },
     {
-        private: true,
+        private: false,
         component: lazy(() => import(/*webpackChunkName:"collect"*/'../page/collect')),
         pathname: '/collect'
     },

@@ -98,6 +98,7 @@ Home.propTypes = {
         tab: PropTypes.string.isRequired,
         limit: PropTypes.number.isRequired
     }).isRequired
+
 }
 
 const topics = state => ({

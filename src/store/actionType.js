@@ -38,3 +38,5 @@ export const COLLECT_LIST = 'COLLECT_LIST'
 
 // 我的消息
 export const MESSAGES = 'MESSAGES'
+// 标记单个消息为已读
+export const MARK_ONE = 'MARK_ONE'

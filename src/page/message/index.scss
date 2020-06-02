@@ -1,10 +1,24 @@
 @include b(message) {
+    padding-bottom:48px;
     background: $bg04;
     @include e(item){
+        position: relative;
         padding:15px 15px;
         line-height: 24px;
         a{
             color:$btn01;
+        }
+        @include when(notread){
+            &:before{
+                content: '';
+                position: absolute;
+                left:5px;
+                top:25px;
+                width: 5px;
+                height: 5px;
+                border-radius: 100%;
+                background:red;
+            }
         }
     }
 }

@@ -12,6 +12,11 @@ const messages = data => ({
     data
 })
 
+const markOne = id => ({
+    type: types.MARK_ONE,
+    id
+})
+
 /**
  * 获取消息列表
  * @returns {Function}
@@ -25,6 +30,20 @@ export const getMessages = () => (dispatch, getState) => {
         .then(res => {
             if (res.success) {
                 dispatch(messages(res.data))
+            }
+        })
+}
+
+export const getMarkOne = id => (dispatch, getState) => {
+    const state = getState()
+    const token = state.userInfo.token
+    if (!token) return
+    Ajax.markOne(id, {
+        accesstoken: token
+    })
+        .then(res => {
+            if (res.success) {
+                dispatch(markOne(id))
             }
         })
 }

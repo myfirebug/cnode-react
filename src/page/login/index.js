@@ -19,9 +19,8 @@ import {
 } from 'antd-mobile'
 import './index.scss'
 
-const Login = memo(({ accessToken, getUserInfo, location, ...rest }) => {
+const Login = memo(({ accessToken, getUserInfo, location }) => {
     const [token, setToken] = useState('')
-    console.log(rest)
     useEffect(() => {
         if (accessToken) {
             createHashHistory().push({
@@ -70,7 +69,8 @@ const Login = memo(({ accessToken, getUserInfo, location, ...rest }) => {
 
 Login.propTypes = {
     accessToken: PropTypes.string,
-    getUserInfo: PropTypes.func.isRequired
+    getUserInfo: PropTypes.func.isRequired,
+    location: PropTypes.object
 }
 
 

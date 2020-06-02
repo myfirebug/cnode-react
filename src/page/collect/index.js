@@ -16,6 +16,7 @@ import TopicsList from '../../components/topics/TopicsList'
 import {
     getUrl
 } from '../../util'
+import PropTypes from 'prop-types'
 
 
 const Collect = memo(({getUserCollects, topics }) => {
@@ -28,6 +29,11 @@ const Collect = memo(({getUserCollects, topics }) => {
         }} />
     )
 })
+Collect.propTypes = {
+    topics: PropTypes.array.isRequired,
+    getUserCollects: PropTypes.func.isRequired
+}
+
 
 const collectState = state => ({
     topics: state.collects
