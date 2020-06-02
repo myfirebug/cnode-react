@@ -1,7 +1,10 @@
-# 基于react+react-redux+redux-thunk+redux+logger+redux-persist+hook开发的cnode-react社区
----
+# cnode-react社区
+本项目基于react+react-redux+redux-thunk+redux+logger+redux-persist+hook开发的
+
 ## demo
-![https://myfirebug.github.io/react-cnode/index.html#/home](https://github.com/myfirebug/cnode-react/tree/master/public/images/ewm.png)
+![cnode社区](https://myfirebug.github.io/react-cnode/images/ewm.png)
+[react-cnode社区](https://myfirebug.github.io/react-cnode/index.html#/home)
+
 ## 目录结构
 ```
 |-- cnode-react
@@ -46,6 +49,12 @@
 + 我的消息(单条标记已读)
 + 个人中心 （未登录，显示登录，否则显示退出、最新创建的话题、最近参与的话题、收藏的）
 + 查看别人资料（最新创建的话题、最近参与的话题、收藏的）
+
+## 部分图片
+![首页](https://myfirebug.github.io/react-cnode/images/home.jpg)
+![登录](https://myfirebug.github.io/react-cnode/images/login.jpg)
+![详情](https://myfirebug.github.io/react-cnode/images/details.jpg)
+![我的](https://myfirebug.github.io/react-cnode/images/my.jpg)
 
 
 
