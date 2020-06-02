@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="7c37dcfc-b31d-474b-936c-7aa43087c8fb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -54,7 +53,7 @@
           <entry key="html" value="370" />
           <entry key="js" value="18476" />
           <entry key="json" value="4" />
-          <entry key="md" value="498" />
+          <entry key="md" value="499" />
           <entry key="scss" value="3252" />
         </counts>
       </usages-collector>
@@ -63,7 +62,7 @@
           <entry key="HTML" value="370" />
           <entry key="JSON" value="4" />
           <entry key="JavaScript" value="18476" />
-          <entry key="PLAIN_TEXT" value="498" />
+          <entry key="PLAIN_TEXT" value="499" />
           <entry key="SCSS" value="3252" />
         </counts>
       </usages-collector>
@@ -96,8 +95,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="3" column="101" selection-start-line="3" selection-start-column="101" selection-end-line="3" selection-end-column="101" />
+            <state relative-caret-position="120">
+              <caret line="4" column="7" lean-forward="true" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -313,12 +312,12 @@
       <option name="presentableId" value="Default" />
       <updated>1590547871700</updated>
       <workItem from="1590547874078" duration="24102000" />
-      <workItem from="1590628522962" duration="92843000" />
+      <workItem from="1590628522962" duration="92959000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="116945000" />
+    <option name="totallyTimeSpent" value="117061000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -850,8 +849,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="3" column="101" selection-start-line="3" selection-start-column="101" selection-end-line="3" selection-end-column="101" />
+        <state relative-caret-position="120">
+          <caret line="4" column="7" lean-forward="true" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
         </state>
       </provider>
     </entry>
