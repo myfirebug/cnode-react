@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="7c37dcfc-b31d-474b-936c-7aa43087c8fb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -54,7 +53,7 @@
           <entry key="html" value="370" />
           <entry key="js" value="18468" />
           <entry key="json" value="4" />
-          <entry key="md" value="454" />
+          <entry key="md" value="470" />
           <entry key="scss" value="3252" />
         </counts>
       </usages-collector>
@@ -63,7 +62,7 @@
           <entry key="HTML" value="370" />
           <entry key="JSON" value="4" />
           <entry key="JavaScript" value="18468" />
-          <entry key="PLAIN_TEXT" value="454" />
+          <entry key="PLAIN_TEXT" value="470" />
           <entry key="SCSS" value="3252" />
         </counts>
       </usages-collector>
@@ -95,20 +94,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="524">
-              <caret line="174" lean-forward="true" selection-start-line="174" selection-end-line="174" />
+            <state relative-caret-position="300">
+              <caret line="21" column="23" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="42" column="25" selection-start-line="42" selection-start-column="25" selection-end-line="42" selection-end-column="25" />
+            <state relative-caret-position="1408">
+              <caret line="50" column="22" lean-forward="true" selection-start-line="50" selection-start-column="22" selection-end-line="50" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -250,8 +249,8 @@
         <option value="$PROJECT_DIR$/src/page/login/index.js" />
         <option value="$PROJECT_DIR$/src/router/index.js" />
         <option value="$PROJECT_DIR$/src/page/my/index.js" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -285,6 +284,11 @@
             <path>
               <item name="cnode-react" type="b2602c69:ProjectViewProjectNode" />
               <item name="cnode-react" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cnode-react" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cnode-react" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="cnode-react" type="b2602c69:ProjectViewProjectNode" />
@@ -357,12 +361,12 @@
       <option name="presentableId" value="Default" />
       <updated>1590547871700</updated>
       <workItem from="1590547874078" duration="24102000" />
-      <workItem from="1590628522962" duration="91140000" />
+      <workItem from="1590628522962" duration="91338000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="115242000" />
+    <option name="totallyTimeSpent" value="115440000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -391,7 +395,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32939914" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.30686694" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.30686694" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -885,17 +889,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
+    <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="524">
-          <caret line="174" lean-forward="true" selection-start-line="174" selection-end-line="174" />
+        <state relative-caret-position="1408">
+          <caret line="50" column="22" lean-forward="true" selection-start-line="50" selection-start-column="22" selection-end-line="50" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
+    <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="42" column="25" selection-start-line="42" selection-start-column="25" selection-end-line="42" selection-end-column="25" />
+        <state relative-caret-position="300">
+          <caret line="21" column="23" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
         </state>
       </provider>
     </entry>
