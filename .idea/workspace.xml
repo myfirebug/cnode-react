@@ -2,20 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7c37dcfc-b31d-474b-936c-7aa43087c8fb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/page/collect/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/page/collect/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/page/details/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/page/details/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/page/home/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/page/home/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/page/login/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/page/login/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/page/message/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/page/message/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/page/message/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/page/message/index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/page/my/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/page/my/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/actionType.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actionType.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/actions/message.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/message.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/actions/topics.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/topics.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/reducers/message.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/message.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -40,8 +27,9 @@
         <counts>
           <entry key="css" value="3" />
           <entry key="html" value="5" />
-          <entry key="js" value="323" />
+          <entry key="js" value="324" />
           <entry key="json" value="5" />
+          <entry key="md" value="1" />
           <entry key="scss" value="71" />
         </counts>
       </usages-collector>
@@ -50,7 +38,8 @@
           <entry key="CSS" value="3" />
           <entry key="HTML" value="5" />
           <entry key="JSON" value="5" />
-          <entry key="JavaScript" value="323" />
+          <entry key="JavaScript" value="324" />
+          <entry key="PLAIN_TEXT" value="1" />
           <entry key="SCSS" value="71" />
         </counts>
       </usages-collector>
@@ -64,6 +53,7 @@
           <entry key="html" value="370" />
           <entry key="js" value="18468" />
           <entry key="json" value="3" />
+          <entry key="md" value="260" />
           <entry key="scss" value="3252" />
         </counts>
       </usages-collector>
@@ -72,6 +62,7 @@
           <entry key="HTML" value="370" />
           <entry key="JSON" value="3" />
           <entry key="JavaScript" value="18468" />
+          <entry key="PLAIN_TEXT" value="260" />
           <entry key="SCSS" value="3252" />
         </counts>
       </usages-collector>
@@ -83,10 +74,31 @@
         <entry file="file://$PROJECT_DIR$/src/page/login/index.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="272">
-              <caret line="69" column="19" lean-forward="true" selection-start-line="69" selection-start-column="19" selection-end-line="69" selection-end-column="19" />
+              <caret line="69" column="19" selection-start-line="69" selection-start-column="19" selection-end-line="69" selection-end-column="19" />
               <folding>
                 <element signature="e#101#186#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/service/fetch.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-90">
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+                <element signature="e#101#126#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="284">
+              <caret line="19" column="35" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -104,11 +116,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/page/my/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="59" column="27" selection-start-line="59" selection-start-column="27" selection-end-line="59" selection-end-column="27" />
+            <state relative-caret-position="170">
+              <caret line="57" column="18" selection-start-line="57" selection-start-column="18" selection-end-line="57" selection-end-column="18" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="e#101#155#0" expanded="true" />
@@ -170,7 +182,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/skeleton/List.js" />
         <option value="$PROJECT_DIR$/config-overrides.js" />
         <option value="$PROJECT_DIR$/src/service/fetch.js" />
         <option value="$PROJECT_DIR$/public/index.html" />
@@ -221,6 +232,7 @@
         <option value="$PROJECT_DIR$/src/page/login/index.js" />
         <option value="$PROJECT_DIR$/src/router/index.js" />
         <option value="$PROJECT_DIR$/src/page/my/index.js" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -421,12 +433,12 @@
       <option name="presentableId" value="Default" />
       <updated>1590547871700</updated>
       <workItem from="1590547874078" duration="24102000" />
-      <workItem from="1590628522962" duration="88727000" />
+      <workItem from="1590628522962" duration="89786000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="112829000" />
+    <option name="totallyTimeSpent" value="113888000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -455,7 +467,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32939914" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.27145922" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.30686694" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -468,20 +480,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/assets/scss/mixin/setOneBorder.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="15" column="38" lean-forward="true" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/scss/base/border.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="1" column="18" lean-forward="true" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/header/index.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -929,7 +927,7 @@
     <entry file="file://$PROJECT_DIR$/src/page/login/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
-          <caret line="69" column="19" lean-forward="true" selection-start-line="69" selection-start-column="19" selection-end-line="69" selection-end-column="19" />
+          <caret line="69" column="19" selection-start-line="69" selection-start-column="19" selection-end-line="69" selection-end-column="19" />
           <folding>
             <element signature="e#101#186#0" expanded="true" />
           </folding>
@@ -949,14 +947,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/page/my/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="59" column="27" selection-start-line="59" selection-start-column="27" selection-end-line="59" selection-end-column="27" />
+        <state relative-caret-position="170">
+          <caret line="57" column="18" selection-start-line="57" selection-start-column="18" selection-end-line="57" selection-end-column="18" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="e#101#155#0" expanded="true" />
             <element signature="e#1704#1990#0" />
             <element signature="e#2007#2292#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/service/fetch.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-90">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#101#126#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="19" column="35" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
         </state>
       </provider>
     </entry>
