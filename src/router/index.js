@@ -58,7 +58,7 @@ const Routers = () => {
     return (
         <HashRouter>
             <ErrorBoundary>
-                <Suspense fallback={<div>loading</div>}>
+                <Suspense fallback={<div></div>}>
                     <Switch>
                         {
                             routerList.map((router, index) => {
