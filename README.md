@@ -29,7 +29,8 @@
             |-- index.js
 
 ```
-
+## git地址
+[https://github.com/myfirebug/cnode-react.git](https://github.com/myfirebug/cnode-react.git)
 
 ## 下载
 ```javascript
