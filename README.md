@@ -4,17 +4,29 @@
 
 ## 目录结构
 ├ build // webpack配置文件
+
 ├ public // 静态文件
+
 ├ src // 开发目录
+
 │ ├ assets // 图片、scss配置
+
 │ ├ components // 公用组件
+
 │ ├ hook // hook组件
+
 │ ├ page // 页面
+
 │ ├ router // 路由
+
 │ ├ service // 接口配置
+
 │ ├ skeleton // 骨架屏
+
 │ ├ store // 状态
+
 │ ├ util // 公用方法
+
 
 ## 下载
 ```javascript

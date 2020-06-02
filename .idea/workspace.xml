@@ -53,7 +53,7 @@
           <entry key="html" value="370" />
           <entry key="js" value="18468" />
           <entry key="json" value="3" />
-          <entry key="md" value="408" />
+          <entry key="md" value="444" />
           <entry key="scss" value="3252" />
         </counts>
       </usages-collector>
@@ -62,7 +62,7 @@
           <entry key="HTML" value="370" />
           <entry key="JSON" value="3" />
           <entry key="JavaScript" value="18468" />
-          <entry key="PLAIN_TEXT" value="408" />
+          <entry key="PLAIN_TEXT" value="444" />
           <entry key="SCSS" value="3252" />
         </counts>
       </usages-collector>
@@ -98,7 +98,7 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="480">
-              <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
+              <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
             </state>
           </provider>
         </entry>
@@ -338,12 +338,12 @@
       <option name="presentableId" value="Default" />
       <updated>1590547871700</updated>
       <workItem from="1590547874078" duration="24102000" />
-      <workItem from="1590628522962" duration="90349000" />
+      <workItem from="1590628522962" duration="90495000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="114451000" />
+    <option name="totallyTimeSpent" value="114597000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -876,7 +876,7 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
-          <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
         </state>
       </provider>
     </entry>
