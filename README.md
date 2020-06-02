@@ -1,20 +1,34 @@
 # 基于react+react-redux+redux-thunk+redux+logger+redux-persist+hook开发的cnode-react社区
 ---
-# demo
+## demo
 
-# 下载
+## 目录结构
+├ build // webpack配置文件
+├ public // 静态文件
+├ src // 开发目录
+│ ├ assets // 图片、scss配置
+│ ├ components // 公用组件
+│ ├ hook // hook组件
+│ ├ page // 页面
+│ ├ router // 路由
+│ ├ service // 接口配置
+│ ├ skeleton // 骨架屏
+│ ├ store // 状态
+│ ├ util // 公用方法
+
+## 下载
 ```javascript
   git clone https://github.com/myfirebug/cnode-react.git
   cd cnode-react
   npm install (安装依赖模块)
 ```
-# 运行
+## 运行
 ```javascript
   npm run dev (开发版本访问：http://localhost:3000/)
   npm run dist （发布生产版本）
 ```
 
-# 功能
+## 功能
 + 登录、退出
 + 列表下拉加载、缓存非第一页数据
 + 详情(模拟点赞、收藏功能)未登录不显示评论、收藏、点赞、回复、删除
