@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7c37dcfc-b31d-474b-936c-7aa43087c8fb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -28,8 +29,8 @@
           <entry key="css" value="3" />
           <entry key="html" value="5" />
           <entry key="js" value="324" />
-          <entry key="json" value="5" />
-          <entry key="md" value="1" />
+          <entry key="json" value="6" />
+          <entry key="md" value="2" />
           <entry key="scss" value="71" />
         </counts>
       </usages-collector>
@@ -37,9 +38,9 @@
         <counts>
           <entry key="CSS" value="3" />
           <entry key="HTML" value="5" />
-          <entry key="JSON" value="5" />
+          <entry key="JSON" value="6" />
           <entry key="JavaScript" value="324" />
-          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="PLAIN_TEXT" value="2" />
           <entry key="SCSS" value="71" />
         </counts>
       </usages-collector>
@@ -52,17 +53,17 @@
         <counts>
           <entry key="html" value="370" />
           <entry key="js" value="18468" />
-          <entry key="json" value="3" />
-          <entry key="md" value="444" />
+          <entry key="json" value="4" />
+          <entry key="md" value="454" />
           <entry key="scss" value="3252" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="370" />
-          <entry key="JSON" value="3" />
+          <entry key="JSON" value="4" />
           <entry key="JavaScript" value="18468" />
-          <entry key="PLAIN_TEXT" value="444" />
+          <entry key="PLAIN_TEXT" value="454" />
           <entry key="SCSS" value="3252" />
         </counts>
       </usages-collector>
@@ -94,11 +95,29 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+            <state relative-caret-position="524">
+              <caret line="174" lean-forward="true" selection-start-line="174" selection-end-line="174" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="88">
+              <caret line="42" column="25" selection-start-line="42" selection-start-column="25" selection-end-line="42" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/directoryList.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="8" column="20" lean-forward="true" selection-end-line="168" />
             </state>
           </provider>
         </entry>
@@ -182,7 +201,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/config-overrides.js" />
         <option value="$PROJECT_DIR$/src/service/fetch.js" />
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/src/assets/scss/base/setting.scss" />
@@ -233,6 +251,7 @@
         <option value="$PROJECT_DIR$/src/router/index.js" />
         <option value="$PROJECT_DIR$/src/page/my/index.js" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/package.json" />
       </list>
     </option>
   </component>
@@ -338,12 +357,12 @@
       <option name="presentableId" value="Default" />
       <updated>1590547871700</updated>
       <workItem from="1590547874078" duration="24102000" />
-      <workItem from="1590628522962" duration="90495000" />
+      <workItem from="1590628522962" duration="91140000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="114597000" />
+    <option name="totallyTimeSpent" value="115242000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -385,20 +404,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/components/header/index.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="5" column="15" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/loading/index.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1862">
-          <caret line="78" lean-forward="true" selection-start-line="78" selection-end-line="78" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/hook/useScollLoad.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -873,10 +878,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/directoryList.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="8" column="20" lean-forward="true" selection-end-line="168" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+        <state relative-caret-position="524">
+          <caret line="174" lean-forward="true" selection-start-line="174" selection-end-line="174" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="42" column="25" selection-start-line="42" selection-start-column="25" selection-end-line="42" selection-end-column="25" />
         </state>
       </provider>
     </entry>
