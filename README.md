@@ -52,10 +52,10 @@
 + 查看别人资料（最新创建的话题、最近参与的话题、收藏的）
 
 ## 部分图片
-![首页](https://myfirebug.github.io/react-cnode/images/home.jpg alt="首页" width="480")
-![登录](https://myfirebug.github.io/react-cnode/images/login.jpg alt="登录" width="480")
-![详情](https://myfirebug.github.io/react-cnode/images/details.jpg alt="详情" width="480")
-![我的](https://myfirebug.github.io/react-cnode/images/my.jpg alt="我的" width="480")
+![首页](https://myfirebug.github.io/react-cnode/images/home.jpg)
+![登录](https://myfirebug.github.io/react-cnode/images/login.jpg)
+![详情](https://myfirebug.github.io/react-cnode/images/details.jpg)
+![我的](https://myfirebug.github.io/react-cnode/images/my.jpg)
 
 
 
