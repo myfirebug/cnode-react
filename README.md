@@ -1,7 +1,7 @@
 # 基于react+react-redux+redux-thunk+redux+logger+redux-persist+hook开发的cnode-react社区
 ---
 ## demo
-![cnode社区二维码](https://github.com/myfirebug/cnode-react/tree/master/public/images/ewm.png)
+![https://myfirebug.github.io/react-cnode/index.html#/home](https://github.com/myfirebug/cnode-react/tree/master/public/images/ewm.png)
 ## 目录结构
 ```
 |-- cnode-react
