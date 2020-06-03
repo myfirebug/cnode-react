@@ -12,7 +12,8 @@ import {
     HashRouter,
     Route,
     Switch,
-    Redirect
+    Redirect,
+    withRouter
 } from 'react-router-dom'
 import ErrorBoundary from '../components/errorBoundary'
 import PrivateRoute from '../components/PrivateRoute'
@@ -54,11 +55,10 @@ const routerList = [
         pathname: '/message'
     }
 ]
-const Routers = () => {
+const Routers = withRouter(() => {
     return (
-        <HashRouter>
-            <ErrorBoundary>
-                <Suspense fallback={<div></div>}>
+        <ErrorBoundary>
+            <Suspense fallback={<div></div>}>
                     <Switch>
                         {
                             routerList.map((router, index) => {
@@ -79,9 +79,14 @@ const Routers = () => {
                         <Redirect to='/home' />
                     </Switch>
                 </Suspense>
-            </ErrorBoundary>
+        </ErrorBoundary>
+    )
+})
+
+export default function () {
+    return (
+        <HashRouter>
+            <Routers />
         </HashRouter>
     )
 }
-
-export default Routers
