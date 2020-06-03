@@ -1,4 +1,4 @@
-# cnode-react社区
+# React劲爆新特性Hooks重构cnode社区
 本项目基于react+react-redux+redux-thunk+redux+logger+redux-persist+hook开发的
 
 ## demo
