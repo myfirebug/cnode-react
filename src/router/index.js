@@ -6,7 +6,8 @@
  */
 import React, {
     lazy,
-    Suspense
+    Suspense,
+    useEffect
 } from 'react'
 import {
     HashRouter,
@@ -55,7 +56,13 @@ const routerList = [
         pathname: '/message'
     }
 ]
-const Routers = withRouter(() => {
+const Routers = withRouter((props) => {
+    useEffect(() => {
+        // 路由监听
+        props.history.listen((history) => {
+            // test
+        })
+    }, [props])
     return (
         <ErrorBoundary>
             <Suspense fallback={<div></div>}>
