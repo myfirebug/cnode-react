@@ -1,0 +1,163 @@
+@mixin scale-border-common($color, $top, $right, $bottom, $left) {
+  content: '';
+  position: absolute;
+  background-color: $color;
+  display: block;
+  z-index: 0;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin border-top($color: $c24) {
+  border-top: 1px solid $color;
+  @media screen and (-webkit-min-device-pixel-ratio: 2) {
+    position: relative;
+    box-sizing: border-box;
+    border-top: none;
+    &:before {
+      @include scale-border-common($color, 0, auto, auto, 0);
+      width: 100%;
+      height: 1px;
+      transform-origin: 50% 50%;
+      transform: scaleY(0.5);
+      @media screen and (-webkit-min-device-pixel-ratio: 3) {
+        transform: scaleY(0.33);
+      }
+    }
+  }
+}
+
+@mixin border-bottom($color: $c24) {
+  border-bottom: 1px solid $color;
+  @media screen and (-webkit-min-device-pixel-ratio: 2) {
+    position: relative;
+    border-bottom: none;
+    &:after {
+      @include scale-border-common($color, auto, auto, 0, 0);
+      width: 100%;
+      height: 1px;
+      transform-origin: 50% 100%;
+      transform: scaleY(0.5);
+      @media screen and (-webkit-min-device-pixel-ratio: 3) {
+        transform: scaleY(0.33);
+      }
+    }
+  }
+}
+
+@mixin border-left($color: $c24) {
+  border-left: 1px solid $color;
+  @media screen and (-webkit-min-device-pixel-ratio: 2) {
+    position: relative;
+    border-left: none;
+    &:after {
+      @include scale-border-common($color, 0, auto, auto, 0);
+      width: 1px;
+      height: 100%;
+      transform-origin: 100% 50%;
+      transform: scaleX(0.5);
+      @media screen and (-webkit-min-device-pixel-ratio: 3) {
+        transform: scaleY(0.33);
+      }
+    }
+  }
+}
+
+@mixin border-right($color: $c24) {
+  border: 1px solid $color;
+  @media screen and (-webkit-min-device-pixel-ratio: 2) {
+    position: relative;
+    border-right: none;
+    &:after {
+      @include scale-border-common($color, 0, 0, auto, auto);
+      width: 1px;
+      height: 100%;
+      background: $color;
+      transform-origin: 100% 50%;
+      transform: scaleX(0.5);
+      @media screen and (-webkit-min-device-pixel-ratio: 3) {
+        transform: scaleY(0.33);
+      }
+    }
+  }
+}
+
+@mixin border-all($color: $c24, $radius: 0, $hoverColor: '', $disabledColor: '') {
+  border: 1px solid $color;
+  border-radius: $radius;
+  &:active,
+  &:hover{
+    border-color:$hoverColor;
+  }
+  &.is-disabled{
+    &:active,
+    &:hover{
+      border-color:$disabledColor;
+    }
+  }
+  @media screen and (-webkit-min-device-pixel-ratio: 2) {
+    position: relative;
+    border: none;
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 200%;
+      height: 200%;
+      border: 1px solid $color;
+      border-radius: $radius * 2;
+      transform-origin: 0 0;
+      transform: scale(0.5);
+      box-sizing: border-box;
+    }
+    &:hover:after,
+    &:active:after{
+      border-color:$hoverColor;
+    }
+    &.is-disabled{
+      &:hover:after,
+      &:active:after{
+        border-color:$disabledColor;
+      }
+    }
+  }
+}
+
+@mixin border-tb($color: $c24) {
+  border-top: 1px solid $color;
+  border-bottom: 1px solid $color;
+  overflow: hidden;
+  @media screen and (-webkit-min-device-pixel-ratio: 2) {
+    position: relative;
+    border: none;
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 200%;
+      height: 200%;
+      border-top: 1px solid $color;
+      border-bottom: 1px solid $color;
+      transform-origin: 0 0;
+      transform: scale(0.5);
+      box-sizing: border-box;
+    }
+  }
+}
+
+@mixin border-all-none() {
+  border: none;
+  @media screen and (-webkit-min-device-pixel-ratio: 2) {
+    border: none;
+    &:after {
+      content: '';
+      width: 0;
+      height: 0;
+      border: none;
+    }
+  }
+}

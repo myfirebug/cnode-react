@@ -1,0 +1,19 @@
+@include b(login) {
+    min-height: 100vh;
+    @include e(header) {
+        padding: pxTorem(200) 0 pxTorem(50) 0;
+        text-align: center;
+        .logo {
+            height: pxTorem(80);
+        }
+    }
+    @include e(body){
+        .sz-list-item{
+            margin:0;
+            padding: pxTorem(24);
+        }
+        .sz-btn{
+            margin-top:pxTorem(30);
+        }
+    }
+}

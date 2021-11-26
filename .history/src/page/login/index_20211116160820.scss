@@ -1,0 +1,76 @@
+@include b(login) {
+    padding: 0 pxTorem(16) pxTorem(80) pxTorem(16);
+    min-height: 100vh;
+    box-sizing: border-box;
+    overflow: hidden;
+    background-image: linear-gradient(var(--daq-primary-color), var(--daq-gray-1));
+
+    @include e(bg) {
+        position: relative;
+        margin-top: 20vw;
+        width: 100%;
+
+        .background {
+            position: absolute;
+            top: pxTorem(-250);
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            height: pxTorem(672);
+            background: url("https://file.daqsoft.com/ued/miniprogram/szxc/login-bg.png") no-repeat;
+            background-size: 100% auto;
+        }
+
+        &:after,
+        &:before {
+            position: absolute;
+            content: '';
+            left: 50%;
+            background: rgba(255, 255, 255, .1);
+            width: 100%;
+            height: pxTorem(150);
+            border-radius: pxTorem(30);
+        }
+
+        &:after {
+            top: pxTorem(-20);
+            width: 90%;
+            margin-left: -45%;
+        }
+
+        &:before {
+            top: pxTorem(-40);
+            width: 80%;
+            margin-left: -40%;
+        }
+    }
+
+    @include e(wrapper) {
+        position: relative;
+        z-index: 1;
+        flex: 1;
+        padding: 0 pxTorem(44);
+        border-radius: pxTorem(30);
+        background: var(--daq-white);
+    }
+
+    @include e(header) {
+        padding: pxTorem(36) 0 pxTorem(30) 0;
+        line-height: 1;
+
+        .return {
+            display: inline-block;
+            font-size: pxTorem(28);
+            line-height: pxTorem(68);
+            color:var(--daq-gray-4);
+        }
+
+        .title {
+            margin:0;
+            padding-top: pxTorem(20);
+            font-size: pxTorem(46);
+            font-weight: bold;
+            color:var(--daq-gray-8);
+        }
+    }
+}

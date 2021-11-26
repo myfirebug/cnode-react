@@ -1,0 +1,4 @@
+@mixin toast-background($url) {
+    background: url($url) no-repeat;
+    background-size: 100% 100%;
+}

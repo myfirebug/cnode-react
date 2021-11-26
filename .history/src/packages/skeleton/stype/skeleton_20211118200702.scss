@@ -1,0 +1,41 @@
+@include b(skeleton) {
+    padding:pxTorem(30) pxTorem(32);
+    margin:0;
+    list-style: none;
+    @include e(header){
+        display: flex;
+    }
+    @include e(image){
+        @include when(avatar) {
+            border-radius: 50%;
+        }
+        @include when(image){
+            border-radius: pxTorem(10);
+        }
+    }
+    @include e(content){
+        flex:1;
+        margin-left:pxTorem(30);
+    }
+    @include e(animate) {
+        animation: sz-skeleton__loading 1.4s ease infinite;
+        background: linear-gradient(90deg, rgba(190, 190, 190, .2) 25%, rgba(129, 129, 129, .24) 37%, rgba(190, 190, 190, .2) 63%);
+        background-size: 400% 400%;
+    }
+    @include e(item){
+        margin-bottom:pxTorem(30);
+    }
+    @include e(row){
+        margin-top:pxTorem(10);
+        height: pxTorem(16);
+        border-radius: pxTorem(20);
+    }
+    @keyframes sz-skeleton__loading {
+        0% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0 50%;
+        }
+    }
+}

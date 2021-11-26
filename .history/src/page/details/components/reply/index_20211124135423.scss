@@ -1,0 +1,12 @@
+@include b(replay) {
+ @include e(item){
+     @include border-bottom();
+     @include m(header){
+         display: flex;
+         .avatar{
+             width: pxTorem(64);
+             height: pxTorem(64);
+         }
+     }
+ }
+}

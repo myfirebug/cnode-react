@@ -1,0 +1,43 @@
+@include b(actionsheet) {
+    font-size: pxTorem($fs30);
+
+    @include e(header) {
+        padding: pxTorem(36) pxTorem(32);
+        @include border-bottom();
+        text-align: center;
+        color: var(--daq-gray-4);
+    }
+
+    @include e(footer) {
+        padding: pxTorem(24);
+        text-align: center;
+        border-top: pxTorem(10) solid var(--daq-gray-1);
+    }
+
+    @include e(item) {
+        text-align: center;
+        padding: pxTorem(24);
+        @include border-bottom();
+        color: var(--daq-gray-8);
+        transition: all .25s ease 0s;
+
+        &:active {
+            background: var(--daq-gray-1);
+        }
+
+        @include when(disabled) {
+            color: var(--daq-gray-4);
+
+            &:active {
+                background: none;
+            }
+        }
+
+        .description {
+            margin: 0;
+            padding-top: pxTorem(6);
+            font-size: pxTorem(24);
+            color: var(--daq-gray-4);
+        }
+    }
+}

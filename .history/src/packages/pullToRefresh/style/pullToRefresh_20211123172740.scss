@@ -1,0 +1,14 @@
+@include b(pull-to-refresh){
+    position: relative;
+    @include e(wrapper){
+        position:absolute;
+        left:0;
+        right: 0;
+        top:-30px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 12px;
+        text-align: center;
+        background: var(--daq-gray-1);
+    }
+}

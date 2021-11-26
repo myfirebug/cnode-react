@@ -1,0 +1,87 @@
+@import './mixin.scss';
+
+@include b(btn) {
+    outline: none;
+    box-sizing: border-box;
+    @include e(large) {
+        @include button-size($button-large,
+            $button-padding-large,
+            pxTorem($fs32),
+            $button-border-radius-large);
+    }
+    @include e(middle) {
+        @include button-size($button-middle,
+            $button-padding-middle,
+            pxTorem($fs30),
+            $button-border-radius-middle);
+    }
+    @include e(small) {
+        @include button-size($button-small,
+            $button-padding-small,
+            pxTorem($fs24),
+            $button-border-radius-small);
+    }
+    @include e(mini) {
+        @include button-size($button-mini,
+            $button-padding-mini,
+            pxTorem($fs22),
+            $button-border-radius-mini);
+    }
+    @include e(default) {
+        @include button-color(
+            var(--daq-gray-8),
+            var(--daq-primary-color),
+            var(--daq-primary-color),
+            var(--daq-white),
+            var(--daq-white),
+            var(--daq-white),
+            var(--daq-gray-2),
+            var(--daq-primary-color-hover),
+            var(--daq-primary-color-active)
+        )
+    }
+    @include e(primary) {
+        @include button-color(
+            var(--daq-white),
+            var(--daq-white),
+            var(--daq-white),
+            var(--daq-primary-color),
+            var(--daq-primary-color-hover),
+            var(--daq-primary-color-active)
+        )
+    }
+    @include e(success) {
+        @include button-color(
+            var(--daq-white),
+            var(--daq-white),
+            var(--daq-white),
+            var(--daq-success-color),
+            var(--daq-success-color-hover),
+            var(--daq-success-color-active)
+        )
+    }
+    @include e(danger) {
+        @include button-color(
+            var(--daq-white),
+            var(--daq-white),
+            var(--daq-white),
+            var(--daq-danger-color),
+            var(--daq-danger-color-hover),
+            var(--daq-danger-color-active)
+        )
+    }
+    @include e(warning) {
+        @include button-color(
+            var(--daq-white),
+            var(--daq-white),
+            var(--daq-white),
+            var(--daq-warning-color),
+            var(--daq-warning-color-hover),
+            var(--daq-warning-color-active)
+        )
+    }
+    @include when(block){
+        width: 100%;
+        display: block;
+    }
+}

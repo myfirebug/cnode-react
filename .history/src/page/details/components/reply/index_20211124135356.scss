@@ -1,0 +1,8 @@
+@include b(replay) {
+ @include e(item){
+     @include border-bottom();
+     @include m(header){
+         display: flex;
+     }
+ }
+}

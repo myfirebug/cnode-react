@@ -1,0 +1,14 @@
+@include b(login) {
+    @include e(header) {
+        padding-top: pxTorem(100);
+        text-align: center;
+        .logo {
+            height: pxTorem(100);
+        }
+    }
+    @include e(body){
+        .sz-list-item{
+            margin:0;
+        }
+    }
+}

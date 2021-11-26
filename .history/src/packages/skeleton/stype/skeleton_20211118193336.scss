@@ -1,0 +1,5 @@
+@include b(skeleton){
+    @include e(animate){
+        background: linear-gradient(90deg,rgba(190,190,190,.2) 25%,rgba(129,129,129,.24) 37%,rgba(190,190,190,.2) 63%);
+    }
+}

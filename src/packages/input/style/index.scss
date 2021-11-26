@@ -1,0 +1,52 @@
+@import './mixin.scss';
+@include b(input){
+    position: relative;
+    display: flex;
+    align-items: center;
+    &:hover,
+    &:active{
+        .clear{
+            display: block;
+        }
+    }
+    @include e(large){
+        height: $input-large;
+        font-size: $input-large-font-size;
+    }
+    @include e(middle){
+        height: $input-middle;
+        font-size: $input-middle-font-size;
+    }
+    @include e(small){
+        height: $input-small;
+        font-size: $input-small-font-size;
+    }
+    @include e(mini){
+        height: $input-mini;
+        font-size: $input-mini-font-size;
+    }
+    .clear{
+        display: none;
+        width: pxTorem(48);
+        height: pxTorem(48);
+        color: var(--daq-white);
+        text-align: center;
+        line-height: pxTorem(48);
+        font-size: pxTorem($fs20);
+        background: var(--daq-gray-4);
+        border-radius: 50%;
+        transform: scale(.6);
+    }
+    input{
+        flex:1;
+        border: none;
+        outline: none;
+        height: 100%;
+        width: 100%;
+        color: var(--daq-gray-8);
+        background: none;
+        &[disabled]{
+            opacity: 0.6;
+        }
+    }
+}

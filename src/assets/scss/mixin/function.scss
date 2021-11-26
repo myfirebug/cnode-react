@@ -42,3 +42,7 @@
 
   @return containsModifier($selector) or containWhenFlag($selector) or containPseudoClass($selector);
 }
+
+@function pxTorem($px) {
+  @return ($px / 2) + px;
+}

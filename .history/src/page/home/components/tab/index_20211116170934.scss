@@ -1,0 +1,11 @@
+@include b(tab){
+    display: flex;
+    height: pxTorem(96);
+    line-height: pxTorem(96);
+    text-align: center;
+    font-size: pxTorem(30);
+    background: var(--daq-primary-color);
+    @include e(item) {
+        flex:1;
+    }
+}

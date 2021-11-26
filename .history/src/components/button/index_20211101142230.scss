@@ -1,0 +1,9 @@
+// "large" | "middle" | "small" | "mini";
+$btn-size-large: 44px;
+$btn-size-middle: 40px;
+$btn-size-small: 30px;
+$btn-size-mini: 24px;
+
+@include b(btn){
+
+}

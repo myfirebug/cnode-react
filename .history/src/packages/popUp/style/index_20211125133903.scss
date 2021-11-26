@@ -1,0 +1,70 @@
+@include b(popup) {
+    position: fixed;
+    z-index: 1001;
+    background: #fff;
+    @include e(header) {
+      @include when(default) {
+        height: pxTorem(90);
+        line-height: pxTorem(90);
+        font-size: pxTorem(30);
+        text-align: center;
+        color: #666;
+        @include border-bottom()
+      }
+    }
+    @include when(left) {
+      bottom: 0;
+      right: 0;
+      top: 0;
+      @include when(round) {
+        border-bottom-left-radius: pxTorem(20);
+        border-top-left-radius: pxTorem(20);
+      }
+    }
+    @include when(center) {
+      left:50%;
+      top:50%;
+      width: 80%;
+      transform: translate(-50%, -50%);
+      @include when(round) {
+        border-radius: pxTorem(20);
+      }
+    }
+    @include when(top) {
+      left: 0;
+      right: 0;
+      bottom: 0;
+      @include when(round) {
+        border-top-left-radius: pxTorem(20);
+        border-top-right-radius: pxTorem(20);
+      }
+    }
+    @include when(bottom) {
+      left: 0;
+      right: 0;
+      top: 0;
+      @include when(round) {
+        border-bottom-left-radius: pxTorem(20);
+        border-bottom-right-radius: pxTorem(20);
+      }
+    }
+    @include when(right) {
+      bottom: 0;
+      left: 0;
+      top: 0;
+      @include when(round) {
+        border-bottom-right-radius: pxTorem(20);
+        border-top-right-radius: pxTorem(20);
+      }
+    }
+    @include e(mask) {
+      position: fixed;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      z-index: 1000;
+      background: rgba(0, 0, 0, .8);
+    }
+  }
+  

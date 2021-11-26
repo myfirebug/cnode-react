@@ -1,0 +1,10 @@
+@include b(message){
+    overflow: hidden;
+    @include e(item){
+        padding:pxTorem(20);
+        margin:pxTorem(20) pxTorem(30);
+        background: var(--daq-white);
+        border-radius: pxTorem(20);
+        @include m(header){}
+    }
+}

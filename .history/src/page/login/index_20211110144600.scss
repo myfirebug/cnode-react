@@ -1,0 +1,22 @@
+@include b(login) {
+    @include e(header) {
+        padding: pxTorem(200) 0 pxTorem(100) 0;
+        text-align: center;
+        @include border-bottom();
+        .logo {
+            height: pxTorem(100);
+        }
+    }
+    @include e(body){
+        .sz-list-item{
+            margin:0;
+            padding: pxTorem(24);
+        }
+        .sz-input input{
+            text-align: center;
+        }
+        .sz-btn{
+            margin-top:pxTorem(30);
+        }
+    }
+}

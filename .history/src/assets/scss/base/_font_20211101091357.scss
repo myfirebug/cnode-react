@@ -1,0 +1,14 @@
+// 数字乡村移动端字体图标库
+@font-face {
+  font-family: 'font_family';  /* Project id 2558100 */
+  src: url('//at.alicdn.com/t/font_2558100_wzlgdatqc88.woff2?t=1632814219316') format('woff2'),
+  url('//at.alicdn.com/t/font_2558100_wzlgdatqc88.woff?t=1632814219316') format('woff'),
+  url('//at.alicdn.com/t/font_2558100_wzlgdatqc88.ttf?t=1632814219316') format('truetype');
+}
+.sz-icon {
+  font-family: "font_family" !important;
+  font-size: 16rpx;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

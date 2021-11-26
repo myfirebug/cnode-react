@@ -1,0 +1,45 @@
+:root {
+  //主色
+  --daq-primary-color: #1890ff;
+  --daq-primary-color-hover: #40a9ff;
+  --daq-primary-color-active: #096dd9;
+  --daq-primary-color-outline: rgba(24, 144, 255, .2);
+  --daq-primary-1: #e6f7ff;
+  --daq-primary-2: #bae7ff;
+  --daq-primary-3: #91d5ff;
+  --daq-primary-4: #69c0ff;
+  --daq-primary-5: #40a9ff;
+  --daq-primary-6: #1890ff;
+  --daq-primary-7: #096dd9;
+
+  // 中性色
+  --daq-white: #fff;
+  --daq-gray-1: #e6e6e6;
+  --daq-gray-2: #cccccc;
+  --daq-gray-3: #b3b3b3;
+  --daq-gray-4: #999999;
+  --daq-gray-5: #808080;
+  --daq-gray-6: #666666;
+  --daq-gray-7: #4d4d4d;
+  --daq-gray-8: #333333;
+  --daq-gray-9: #1a1a1a;
+  --daq-black: #000;
+
+  // 成功色
+  --daq-success-color: #52c41a;
+  --daq-success-color-hover: #73d13d;
+  --daq-success-color-active: #389e0d;
+  --daq-success-color-outline: rgba(82, 196, 26, .2);
+
+  // 错误
+  --daq-error-color: #ff4d4f;
+  --daq-error-color-hover: #ff7875;
+  --daq-error-color-active: #d9363e;
+  --daq-error-color-outline: rgba(255, 77, 79, .2);
+
+  // a警告
+  --daq-warning-color: #faad14;
+  --daq-warning-color-hover: #ffc53d;
+  --daq-warning-color-active: #d48806;
+  --daq-warning-color-outline: rgba(250, 173, 20, .2);
+}

@@ -1,0 +1,15 @@
+// "large" | "middle" | "small" | "mini";
+$btn-size-large: 44px;
+$btn-size-middle: 40px;
+$btn-size-small: 30px;
+$btn-size-mini: 24px;
+// "default" | "primary" | "success" | "warning" | "danger"
+$btn-color-default: $mc01;
+$btn-color-primary: $mc01;
+$btn-color-success: 44px;
+$btn-color-warning: 44px;
+$btn-color-danger: 44px;
+
+@include b(btn){
+
+}

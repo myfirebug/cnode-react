@@ -1,0 +1,9 @@
+@include b(my) {
+    min-height: 100vh;
+    background: var(--daq-gray-1);
+};
+
+@include b(box){
+    background: var(--daq-primary-1);
+    @include e(header){}
+}

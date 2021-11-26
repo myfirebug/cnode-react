@@ -1,0 +1,8 @@
+@include b(login) {
+    .go{
+        display: block;
+        text-decoration: none;
+        text-align:center;
+        line-height: pxTorem(60);
+    }
+}

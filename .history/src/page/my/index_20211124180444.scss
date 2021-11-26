@@ -1,0 +1,60 @@
+@include b(my) {
+    min-height: 100vh;
+    background: var(--daq-gray-1);
+    overflow: hidden;
+    @include e(header){
+        display: flex;
+        align-items: center;
+        padding:pxTorem(30);
+        background: var(--daq-white);
+        .avatar{
+            width:pxTorem(150);
+            height:pxTorem(150);
+            overflow: hidden;
+            border-radius: pxTorem(20);
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .content{
+            padding-left:pxTorem(30);
+            .username{
+                font-size: pxTorem(40);
+            }
+            .score{
+                padding-top: pxTorem(20)
+            }
+        }
+    }
+};
+
+@include b(box){
+    margin-top:pxTorem(10);
+    background: var(--daq-white);
+    @include e(header){
+        padding:0 pxTorem(30);
+        height: pxTorem(96);
+        @include border-bottom();
+        line-height: pxTorem(96);
+        font-size: pxTorem($fs32);
+        color:var(--daq-gray-4);
+    }
+    @include e(body){
+        .sz-list-item__before{
+            width: auto;
+            padding-right: pxTorem(20);
+        }
+        .avatar{
+            width: pxTorem(64);
+            height: pxTorem(64);
+            border-radius: 50%;
+            overflow: hidden;
+            background: var(--daq-gray-1);
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}

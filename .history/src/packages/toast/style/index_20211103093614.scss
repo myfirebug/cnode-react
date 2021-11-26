@@ -1,0 +1,106 @@
+@import './mixin.scss';
+
+
+@include b(toast) {
+    position: fixed;
+    width: pxTorem(200);
+    height: pxTorem(200);
+    border-radius: pxTorem(20);
+    left: 50%;
+    top: 50%;
+    z-index: 1000;
+    opacity: 0;
+    text-align: center;
+    font-size: pxTorem($fs24);
+    color: #fff;
+    animation-fill-mode: forwards;
+    transform: translate(-50%, -50%);
+    background: $daq-mask-color;
+
+    &__loading,
+    &__success,
+    &__error,
+    &__warning {
+        .sz-status {
+            position: relative;
+            display: block;
+            width: pxTorem(80);
+            height: pxTorem(80);
+            margin: pxTorem(34) auto pxTorem(20) auto;
+        }
+    }
+
+    @include e(loading) {
+        .sz-status {
+            animation: loading 3s linear infinite;
+            @include toast-background('../../../assets/images/loading.png');
+
+            @keyframes loading {
+                0% {
+                    transform: rotate(0);
+                }
+
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+        }
+    }
+
+    @include e(success) {
+        .sz-status {
+            @include toast-background('../../../assets/images/success.png');
+        }
+    }
+
+    @include e(error) {
+        .sz-status {
+            @include toast-background('../../../assets/images/error.png');
+        }
+    }
+
+    @include e(warning) {
+        .sz-status {
+            @include toast-background('../../../assets/images/warning.png');
+        }
+    }
+
+    @include e(html) {
+        width: auto;
+        max-width: 80%;
+        height: pxTorem(60);
+        padding: 0 pxTorem(20);
+        line-height: pxTorem(60);
+        border-radius: pxTorem(6);
+    }
+
+    @include when(show) {
+        animation-name: show;
+        animation-duration: .5s;
+    }
+
+    @keyframes show {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @include when(hide) {
+        animation-name: hide;
+        animation-duration: .3s;
+    }
+
+    @keyframes hide {
+        0% {
+            opacity: 1;
+        }
+
+        100% {
+            opacity: 0;
+        }
+    }
+}

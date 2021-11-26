@@ -1,0 +1,6 @@
+@include b(input){
+    flex:1;
+    @include e(wrapper){
+        display: flex;
+    }
+}

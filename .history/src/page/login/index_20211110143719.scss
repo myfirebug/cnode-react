@@ -1,0 +1,8 @@
+@include b(login) {
+    @include e(header) {
+        text-align: center;
+        .logo {
+            height: pxTorem(100);
+        }
+    }
+}

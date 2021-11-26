@@ -1,0 +1,29 @@
+@import './mixin.scss';
+
+@include b(list-item) {
+    margin-left: pxTorem(24);
+    padding: pxTorem(24) pxTorem(24) pxTorem(24) 0;
+    font-size: pxTorem(30);
+    color: var(--daq-gray-6);
+    @include border-bottom();
+
+    @include e(header) {}
+
+    @include e(body) {
+        display: flex;
+        align-items: center;
+    }
+
+    @include e(before) {
+        width: $list-before-width;
+    }
+
+    @include e(after) {
+        padding-left: pxTorem(24);
+    }
+
+    @include e(center) {
+        flex: 1;
+        overflow: hidden;
+    }
+}

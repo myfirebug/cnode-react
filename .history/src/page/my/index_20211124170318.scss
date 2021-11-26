@@ -1,0 +1,25 @@
+@include b(my) {
+    min-height: 100vh;
+    background: var(--daq-gray-1);
+};
+
+@include b(box){
+    margin-top:pxTorem(20);
+    background: var(--daq-white);
+    @include e(header){
+        padding:0 pxTorem(30);
+        height: pxTorem(96);
+        @include border-bottom();
+        line-height: pxTorem(96);
+        font-size: pxTorem($fs32);
+        color:var(--daq-gray-4);
+    }
+    @include e(body){
+        .avatar{
+            width: pxTorem(64);
+            height: pxTorem(64);
+            border-radius: 50%;
+            overflow: hidden;
+        }
+    }
+}

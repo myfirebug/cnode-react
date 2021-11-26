@@ -1,0 +1,39 @@
+@include b(scroll-load) {
+    @include e(loading) {
+      position: relative;
+      height: 40px;
+      line-height: 40px;
+      font-size: 12px;
+      text-align: center;
+      color: #aaa;
+      .loading{
+        position: relative;
+        top: -2px;
+        display: inline-block;
+        margin-right: 5px;
+        vertical-align: middle;
+        width: 14px;
+        height: 14px;
+        border: 1px solid #999;
+        border-right-color: transparent;
+        box-sizing: border-box;
+        border-radius: 50%;
+        animation: rotate 1s infinite linear;
+      }
+      @keyframes rotate {
+        0% {
+          -webkit-transform: rotate(0);
+          transform: rotate(0);
+        }
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+    }
+    @include e(nodata){
+        text-align: center;
+        color:var(--daq-gray-4);
+    }
+  }
+  

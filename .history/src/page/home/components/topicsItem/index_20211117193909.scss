@@ -1,0 +1,44 @@
+@include b(topics) {
+    @include e(header) {
+        display: flex;
+        align-items: center;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .user-avatar {
+            width: pxTorem(60);
+            height: pxTorem(60);
+            margin-right: pxTorem(10);
+            border-radius: 50%;
+            overflow: hidden;
+            background: #ccc;
+        }
+
+        .user-name {
+            font-size: pxTorem(34);
+            line-height: 1;
+        }
+
+        .create-at {
+            padding-top: pxTorem(19);
+            font-size: pxTorem(24);
+            line-height: 1;
+        }
+    }
+    @include e(body){
+        padding: pxTorem(20) 0;
+        font-size: $f36;
+        .put-top{
+          padding: 0 pxTorem(10);
+          vertical-align: middle;
+          display: inline-block;
+          margin-right: pxTorem(10);
+          line-height: pxTorem(36);
+          font-size: pxTorem(22);
+          color:$bor01;
+        }
+    }
+}

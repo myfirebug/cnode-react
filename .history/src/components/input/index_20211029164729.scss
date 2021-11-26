@@ -1,0 +1,43 @@
+// 修改input大小
+@mixin inputSize($inputHeight, $fontSize) {
+    height: $inputHeight;
+    font-size: $fontSize;
+    line-height: $inputHeight;
+    &.is-radius {
+        border-radius: $inputHeight;
+    }
+}
+
+@include b(input) {
+    flex: 1;
+    padding:0 10px;
+    border: none;
+    outline: none;
+    background: none;
+
+    @include e(wrapper) {
+        display: flex;
+        align-items: center;
+        color: $fc05;
+        overflow: hidden;
+    }
+
+    @include e(large) {
+        background: #fff;
+        @include inputSize(54px, $s28)
+    }
+
+    @include e(middle) {
+        background: #fff;
+        @include inputSize(48px, $s28)
+    }
+
+    @include e(small) {
+        background: #fff;
+        @include inputSize(44px, $s28)
+    }
+    &__after,
+    &__before{
+        height: 100%;
+    }
+}

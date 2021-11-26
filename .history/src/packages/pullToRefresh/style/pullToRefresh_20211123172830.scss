@@ -1,0 +1,16 @@
+@include b(pull-to-refresh){
+    position: relative;
+    @include e(wrapper){
+        position:absolute;
+        left:0;
+        right: 0;
+        top:-60px;
+        height: 60px;
+        padding-top:30px;
+        line-height: 30px;
+        font-size: 12px;
+        text-align: center;
+        background: var(--daq-gray-1);
+        box-sizing: border-box;
+    }
+}

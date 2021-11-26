@@ -1,0 +1,12 @@
+@include b(details) {
+    padding: 0 pxTorem(30);
+    font-size: pxTorem(28);
+    @include e(body){
+        font-size: 15px;
+        line-height: 1.7em;
+        overflow: auto;
+    }
+    img {
+        max-width: 100%;
+    }
+}

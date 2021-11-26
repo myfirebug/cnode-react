@@ -1,0 +1,20 @@
+// 修改input大小
+@mixin inputSize($inputHeight, $fontSize) {
+    height: $inputHeight;
+    font-size: $fontSize;
+}
+
+@include b(input){
+    flex:1;
+    border: none;
+    outline: none;
+    background: none;
+    @include e(wrapper){
+        display: flex;
+        align-items: center;
+    }
+    @include e(middle){
+        background: #fff;
+        height: 54px;
+    }
+}

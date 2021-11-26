@@ -1,0 +1,7 @@
+@import './listItem.scss';
+
+@include b(list){
+ .sz-list-item:last-child{
+     @include border-all-none()
+ }
+}

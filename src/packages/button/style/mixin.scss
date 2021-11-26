@@ -1,0 +1,72 @@
+// "large" | "middle" | "small" | "mini"
+$button-large: pxTorem(88);
+$button-middle: pxTorem(80);
+$button-small: pxTorem(60);
+$button-mini: pxTorem(48);
+// paddding
+$button-padding-large: 0 pxTorem(72) 0 pxTorem(72);
+$button-padding-middle: 0 pxTorem(72) 0 pxTorem(72);
+$button-padding-small: 0 pxTorem(32) 0 pxTorem(32);
+$button-padding-mini: 0 pxTorem(16) 0 pxTorem(16);
+
+$input-large-font-size: pxTorem(32);
+$input-middle-font-size: pxTorem(30);
+$input-small-font-size: pxTorem(24);
+$input-mini-font-size: pxTorem(22);
+
+// border-radius
+$button-border-radius-large: pxTorem(10);
+$button-border-radius-middle: pxTorem(10);
+$button-border-radius-small: pxTorem(6);
+$button-border-radius-mini: pxTorem(6);
+
+
+@mixin button-size($height, $padding, $font-size, $border-radius) {
+    height: $height;
+    font-size: $font-size;
+    padding: $padding;
+    border-radius: $border-radius;
+}
+
+@mixin button-color($text-color,
+    $text-hover-color,
+    $text-active-color,
+    $bg-color,
+    $bg-hover-color,
+    $bg-active-color,
+    $border-color: transparent,
+    $border-hover-color: transparent,
+    $border-active-color: transparent) {
+
+
+    color: $text-color;
+    border: 1px solid $border-color;
+    background: $bg-color;
+    transition: all .25s ease 0s;
+
+    &:hover {
+        color: $text-hover-color;
+        border-color: $border-hover-color;
+        background: $bg-hover-color;
+    }
+
+    &:active {
+        color: $text-active-color;
+        border-color: $border-active-color;
+        background: $bg-active-color;
+    }
+
+    &[disabled] {
+        text-shadow: none;
+        box-shadow: none;
+        cursor: not-allowed;
+        opacity: 0.5;
+        &:hover,
+        &:active {
+            color: $text-color;
+            border: 1px solid $border-color;
+            background: $bg-color;
+            transition: all .25s ease 0s;
+        }
+    }
+}

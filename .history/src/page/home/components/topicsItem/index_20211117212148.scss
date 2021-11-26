@@ -1,0 +1,69 @@
+@include b(topics) {
+    @include e(item){
+        @include border-all()
+        p{
+            margin:0;
+        }
+    }
+    @include e(header) {
+        display: flex;
+        align-items: center;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .user-avatar {
+            width: pxTorem(60);
+            height: pxTorem(60);
+            margin-right: pxTorem(10);
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        .user-name {
+            font-size: pxTorem(34);
+            line-height: 1;
+        }
+
+        .create-at {
+            padding-top: pxTorem(10);
+            font-size: pxTorem(24);
+            line-height: 1;
+            color:var(--daq-gray-4);
+        }
+    }
+
+    @include e(body) {
+        padding: pxTorem(20) 0;
+        font-size: pxTorem(36);
+
+        .put-top {
+            padding: 0 pxTorem(10);
+            vertical-align: middle;
+            display: inline-block;
+            margin-right: pxTorem(10);
+            line-height: pxTorem(36);
+            font-size: pxTorem(22);
+            color:var(--daq-primary-color);
+            border:1px solid var(--daq-primary-color);
+            border-radius: pxTorem(4);
+        }
+    }
+
+    @include e(footer) {
+        color: var(--daq-gray-4);
+        .ued-mobile {
+            padding-right: pxTorem(10);
+            font-size: pxTorem(20);
+        }
+
+        span {
+            padding-right: pxTorem(20);
+            line-height: 1;
+            font-size: pxTorem(24);
+            margin-right: pxTorem(20);
+        }
+    }
+}
