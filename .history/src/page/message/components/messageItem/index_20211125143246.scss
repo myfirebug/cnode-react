@@ -1,8 +1,0 @@
-@include b(message){
-    overflow: hidden;
-    @include e(item){
-        background: var(--daq-white);
-        margin:pxTorem(20) pxTorem(30);
-        @include m(header){}
-    }
-}

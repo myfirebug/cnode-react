@@ -4,7 +4,6 @@ import { Dispatch } from "redux";
 import { ALL_STATE } from "@store/type";
 import { decrement, increment } from "@store/actions/counter";
 import "./index.scss";
-import {Radio, RadioGroup} from '@src/packages'
 
 interface ICounterProps {
   counterValue: number;
@@ -22,10 +21,6 @@ const Counter: React.FC<ICounterProps> = ({
       <div>您点击了{counterValue}次</div>
       <div onClick={onIncrement}>加一</div>
       <div onClick={onDecrement}>减一</div>
-      <RadioGroup name="sex">
-        <Radio defaultChecked checked>男</Radio>
-        <Radio defaultChecked={false}>女</Radio>
-      </RadioGroup>
       <p>单个</p>
       <input type="radio" />
       <input type="radio" checked />

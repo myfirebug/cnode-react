@@ -1,6 +1,0 @@
-@include b(message){
-    @include e(item){
-        background: var(--daq-white);
-        @include m(header){}
-    }
-}

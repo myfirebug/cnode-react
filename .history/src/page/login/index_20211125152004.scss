@@ -1,9 +1,0 @@
-@include b(login) {
-    .go{
-        display: block;
-        text-decoration: none;
-        text-align:center;
-        font-size: pxTorem($fs26);
-        line-height: pxTorem(100);
-    }
-}

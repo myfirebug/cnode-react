@@ -1,6 +1,0 @@
-@include b(replay) {
- @include e(item){
-     @include border-bottom();
-     background: red;
- }
-}
