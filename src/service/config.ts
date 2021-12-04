@@ -10,7 +10,7 @@ const config: IConfig = {
     default: "https://cnodejs.org/api/v1/",
   },
   production: {
-    default: ""
+    default: "https://cnodejs.org/api/v1/"
   },
 };
 
